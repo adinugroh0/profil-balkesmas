@@ -1,7 +1,6 @@
-// src/app/berita/[id]/page.tsx
 "use client"; // Menandai file ini sebagai Client Component
 
-import { useParams } from "next/navigation";
+import { useParams } from "next/navigation"; // Gunakan useParams dari next/navigation
 import EditBerita from "@/components/EditBerita";
 
 const EditBeritaPage = () => {

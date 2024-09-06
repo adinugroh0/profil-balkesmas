@@ -1,8 +1,9 @@
+// src/components/EditBerita.tsx
+
 "use client";
 import { useState, useEffect } from "react";
-import { doc, updateDoc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import { useRouter } from "next/navigation";
 
 interface EditBeritaProps {
   id: string;
@@ -12,19 +13,23 @@ const EditBerita = ({ id }: EditBeritaProps) => {
   const [judul, setJudul] = useState("");
   const [konten, setKonten] = useState("");
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBerita = async () => {
-      const docRef = doc(db, "berita", id);
-      const docSnap = await getDoc(docRef);
+      try {
+        const docRef = doc(db, "berita", id);
+        const docSnap = await getDoc(docRef);
 
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        setJudul(data.judul);
-        setKonten(data.konten);
-      } else {
-        console.error("No such document!");
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setJudul(data.judul);
+          setKonten(data.konten);
+        } else {
+          setError("Berita tidak ditemukan");
+        }
+      } catch (err) {
+        setError("Gagal memuat berita");
       }
     };
 
@@ -41,17 +46,18 @@ const EditBerita = ({ id }: EditBeritaProps) => {
         judul,
         konten,
       });
-      router.push("/berita");
-    } catch (error) {
-      console.error("Error updating document: ", error);
+      alert("Berita berhasil diperbarui");
+    } catch (err) {
+      setError("Gagal memperbarui berita");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
     <div className="p-4">
       <h2 className="text-xl mb-4">Edit Berita</h2>
+      {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-1">Judul:</label>
@@ -77,7 +83,7 @@ const EditBerita = ({ id }: EditBeritaProps) => {
           type="submit"
           disabled={loading}
           className="bg-blue-500 text-white py-2 px-4 rounded">
-          {loading ? "Updating..." : "Update Berita"}
+          {loading ? "Memperbarui..." : "Perbarui Berita"}
         </button>
       </form>
     </div>
