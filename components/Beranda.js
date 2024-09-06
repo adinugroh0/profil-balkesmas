@@ -18,6 +18,7 @@ const Beranda = function () {
     }, 2000);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -32,7 +33,7 @@ const Beranda = function () {
             misi, fasilitas, berita terbaru, dan agenda kegiatan. Jelajahi
             bagaimana sejarah dan struktur organisasi kami.
           </p>
-          <div className="flex bg-[#3C44EE] w-full lg:w-44 h-10 items-center justify-center rounded-lg gap-2 mx-auto lg:mx-0 m-7">
+          <div className="flex bg-[#3C44EE] w-full lg:w-44 h-10 items-center justify-center rounded-xl gap-2 mx-auto lg:mx-0 m-7">
             <Link href="#" className="text-white">
               Hubungi Kami
             </Link>
@@ -49,7 +50,7 @@ const Beranda = function () {
               <Image
                 src="/pendafaran.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -58,7 +59,7 @@ const Beranda = function () {
               <Image
                 src="/klinik anak.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -67,7 +68,7 @@ const Beranda = function () {
               <Image
                 src="/klinik umum.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -76,7 +77,7 @@ const Beranda = function () {
               <Image
                 src="/laboratorium.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -85,7 +86,7 @@ const Beranda = function () {
               <Image
                 src="/fisioterapi.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -94,7 +95,7 @@ const Beranda = function () {
               <Image
                 src="/klinik vct-cst.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-lg"
+                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
