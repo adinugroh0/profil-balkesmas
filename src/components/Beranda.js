@@ -15,7 +15,7 @@ const Beranda = function () {
         const nextIndex = (currentIndex + 1) % images.length;
         return images[nextIndex];
       });
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
