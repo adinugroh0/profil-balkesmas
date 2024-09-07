@@ -33,7 +33,7 @@ const Beranda = function () {
             misi, fasilitas, berita terbaru, dan agenda kegiatan. Jelajahi
             bagaimana sejarah dan struktur organisasi kami.
           </p>
-          <div className="flex bg-[#3C44EE] w-full lg:w-44 h-10 items-center justify-center rounded-xl gap-2 mx-auto lg:mx-0 m-7">
+          <div className="flex bg-[#3C44EE] w-full lg:w-44 h-14 items-center justify-center rounded-xl gap-2 mx-auto lg:mx-0 m-7">
             <Link href="#" className="text-white">
               Hubungi Kami
             </Link>
