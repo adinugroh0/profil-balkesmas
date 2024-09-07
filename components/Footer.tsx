@@ -11,9 +11,9 @@ const Footer = () => {
           <Image
             src="/footer/adress.png"
             alt="Address Icon"
-            className="rounded-lg w-24 h-20"
-            width={80}
-            height={80}
+            className="rounded-lg w-[35] h-[55"
+            width={458}
+            height={636}
           />
           <p className="text-white mt-2">
             Kh Ahmad Dahlan No.39, Karangkidul, Kec. Semarang Tengah, Kota
@@ -24,9 +24,9 @@ const Footer = () => {
           <Image
             src="/footer/hotline.png"
             alt="Hotline Icon"
-            className="rounded-lg w-24 h-20"
-            width={80}
-            height={80}
+            className="rounded-lg w-[35] h-[55]"
+            width={458}
+            height={636}
           />
           <p className="text-white mt-2">
             Telp (024) 8316758 <br />
@@ -37,9 +37,9 @@ const Footer = () => {
           <Image
             src="/footer/email.png"
             alt="Email Icon"
-            className="rounded-lg w-24 h-20"
-            width={80}
-            height={80}
+            className="rounded-lg w-[35] h-[55]"
+            width={458}
+            height={636}
           />
           <p className="text-white mt-2">bp4smg@yahoo.com</p>
         </div>
@@ -47,9 +47,9 @@ const Footer = () => {
           <Image
             src="/footer/website.png"
             alt="Website Icon"
-            className="rounded-lg w-24 h-20"
-            width={80}
-            height={80}
+            className="rounded-lg w-[35] h-[55]"
+            width={458}
+            height={636}
           />
           <p className="text-white mt-2">
             balkessemarang.
