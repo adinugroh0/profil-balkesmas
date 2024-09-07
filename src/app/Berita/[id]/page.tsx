@@ -1,11 +1,10 @@
 // src/app/berita/[id]/page.tsx
-"use client"; // Menandai file ini sebagai Client Component
-
+"use client";
 import { useParams } from "next/navigation";
 import EditBerita from "@/components/EditBerita";
 
 const EditBeritaPage = () => {
-  const { id } = useParams(); // Menggunakan useParams untuk mendapatkan parameter dari URL
+  const { id } = useParams();
 
   if (!id || typeof id !== "string") {
     return <p>ID tidak valid</p>;
