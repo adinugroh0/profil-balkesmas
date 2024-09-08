@@ -62,30 +62,30 @@ const Navbar = () => {
             </svg>
           </button>
           {profileMenuOpen && (
-            <div className="absolute top-full left-0 w-48 bg-[#3C44EE] text-white mt-1 shadow-lg rounded-xl md:w-60">
+            <div className="absolute top-full text-black  left-0 w-48 bg-white  mt-1 shadow-lg rounded-xl md:w-60">
               <Link
                 href="/Sejarah"
-                className="block py-2 px-4 hover:bg-[#2c39e2]">
+                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Sejarah
               </Link>
               <Link
                 href="/visi-misi"
-                className="block py-2 px-4 hover:bg-[#2c39e2]">
+                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Visi dan Misi
               </Link>
               <Link
                 href="/maklumat-pelayanan"
-                className="block py-2 px-4 hover:bg-[#2c39e2]">
+                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Maklumat Pelayanan
               </Link>
               <Link
                 href="/struktur-organisasi"
-                className="block py-2 px-4 hover:bg-[#2c39e2]">
+                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Struktur Organisasi
               </Link>
               <Link
                 href="/sumberdaya-manusia"
-                className="block py-2 px-4 hover:bg-[#2c39e2]">
+                className="block py-2 px-4 hover:bg-[#2c39e2] hover:text-white">
                 Sumberdaya Manusia
               </Link>
             </div>
