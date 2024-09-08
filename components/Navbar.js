@@ -69,12 +69,12 @@ const Navbar = () => {
                 Sejarah
               </Link>
               <Link
-                href="/visi-misi"
+                href="/Visi-Misi"
                 className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Visi dan Misi
               </Link>
               <Link
-                href="/maklumat-pelayanan"
+                href="/MaklumatPelayanan"
                 className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Maklumat Pelayanan
               </Link>
