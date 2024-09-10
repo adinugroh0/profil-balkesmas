@@ -5,7 +5,12 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(""); // Menu yang sedang aktif
+
+  const toggleMenu = (menu) => {
+    // Tutup menu yang sama atau buka menu baru
+    setActiveMenu(activeMenu === menu ? "" : menu);
+  };
 
   return (
     <div className="container mx-auto flex justify-between bg-white items-center sticky top-0 z-50 p-4">
@@ -42,14 +47,16 @@ const Navbar = () => {
           className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
           Beranda
         </Link>
-        <div className="relative">
+
+        {/* Profil Menu */}
+        <div className="relative group md:hoverable">
           <button
-            onClick={() => setProfileMenuOpen(!profileMenuOpen)}
+            onClick={() => toggleMenu("profil")}
             className="text-black py-2 px-4 md:py-0 hover:text-blue-500 flex items-center">
             Profil
             <svg
               className={`w-4 h-4 inline-block ml-2 transition-transform ${
-                profileMenuOpen ? "rotate-180" : "rotate-0"
+                activeMenu === "profil" ? "rotate-180" : "rotate-0"
               }`}
               fill="none"
               stroke="currentColor"
@@ -61,46 +68,148 @@ const Navbar = () => {
                 d="M5 15l7-7 7 7"></path>
             </svg>
           </button>
-          {profileMenuOpen && (
-            <div className="absolute top-full text-black  left-0 w-48 bg-white  mt-1 shadow-lg rounded-xl md:w-60">
-              <Link
-                href="/Sejarah"
-                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
-                Sejarah
-              </Link>
-              <Link
-                href="/Visi-Misi"
-                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
-                Visi dan Misi
-              </Link>
-              <Link
-                href="/MaklumatPelayanan"
-                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
-                Maklumat Pelayanan
-              </Link>
-              <Link
-                href="/StrukturOrganisasi"
-                className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
-                Struktur Organisasi
-              </Link>
-              <Link
-                href="/sumberdaya-manusia"
-                className="block py-2 px-4 hover:bg-[#2c39e2] hover:text-white">
-                Sumberdaya Manusia
-              </Link>
-            </div>
-          )}
+          <div
+            className={`absolute top-full left-0 w-48 bg-white mt-1 shadow-lg rounded-xl transition-opacity duration-300 ${
+              activeMenu === "profil"
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}>
+            <Link
+              href="/Sejarah"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Sejarah
+            </Link>
+            <Link
+              href="/Visi-Misi"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Visi dan Misi
+            </Link>
+            <Link
+              href="/MaklumatPelayanan"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Maklumat Pelayanan
+            </Link>
+            <Link
+              href="/StrukturOrganisasi"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Struktur Organisasi
+            </Link>
+            <Link
+              href="/SumberdayaManusia"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Sumberdaya Manusia
+            </Link>
+          </div>
         </div>
-        <Link
-          href="/pelayanan"
-          className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
-          Pelayanan
-        </Link>
-        <Link
-          href="/informasi"
-          className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
-          Informasi
-        </Link>
+
+        {/* Pelayanan Menu */}
+        <div className="relative group md:hoverable">
+          <button
+            onClick={() => toggleMenu("pelayanan")}
+            className="text-black py-2 px-4 md:py-0 hover:text-blue-500 flex items-center">
+            Pelayanan
+            <svg
+              className={`w-4 h-4 inline-block ml-2 transition-transform ${
+                activeMenu === "pelayanan" ? "rotate-180" : "rotate-0"
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 15l7-7 7 7"></path>
+            </svg>
+          </button>
+          <div
+            className={`absolute top-full left-0 w-48 bg-white mt-1 shadow-lg rounded-xl transition-opacity duration-300 ${
+              activeMenu === "pelayanan"
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}>
+            <Link
+              href="/Sejarah"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Standart Pelayanan
+            </Link>
+            <Link
+              href="/Sejarah"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Alur Pelayanan Pasien Baru
+            </Link>
+            <Link
+              href="/Visi-Misi"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Alur Pelayanan Pasien Lama
+            </Link>
+            <Link
+              href="/MaklumatPelayanan"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Tarif Pelayanan
+            </Link>
+            <Link
+              href="/StrukturOrganisasi"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Laporan Pengaduan
+            </Link>
+            <Link
+              href="/SumberdayaManusia"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Laporan SKM
+            </Link>
+          </div>
+        </div>
+
+        {/* Informasi Menu */}
+        <div className="relative group md:hoverable">
+          <button
+            onClick={() => toggleMenu("informasi")}
+            className="text-black py-2 px-4 md:py-0 hover:text-blue-500 flex items-center">
+            Informasi
+            <svg
+              className={`w-4 h-4 inline-block ml-2 transition-transform ${
+                activeMenu === "informasi" ? "rotate-180" : "rotate-0"
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 15l7-7 7 7"></path>
+            </svg>
+          </button>
+          <div
+            className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-xl transition-opacity duration-300 ${
+              activeMenu === "informasi"
+                ? "opacity-100 visible"
+                : "opacity-0 invisible"
+            }`}>
+            <Link
+              href="/Sejarah"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Latar Belakang
+            </Link>
+            <Link
+              href="/Sejarah"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Tujuan
+            </Link>
+            <Link
+              href="/Visi-Misi"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Ruang Lingkup
+            </Link>
+            <Link
+              href="/MaklumatPelayanan"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              Dasar Hukum
+            </Link>
+          </div>
+        </div>
+
         <Link
           href="/pendaftaran"
           className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
@@ -116,9 +225,11 @@ const Navbar = () => {
           className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
           Pengaduan
         </Link>
+
+        {/* Close Menu Button for Mobile */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 text-white md:hidden">
+          className="absolute top-4 right-4 text-black md:hidden">
           <svg
             className="w-6 h-6"
             fill="none"

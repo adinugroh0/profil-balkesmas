@@ -50,7 +50,7 @@ const Beranda = function () {
               <Image
                 src="/pendafaran.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -59,7 +59,7 @@ const Beranda = function () {
               <Image
                 src="/klinik anak.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -68,7 +68,7 @@ const Beranda = function () {
               <Image
                 src="/klinik umum.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -77,7 +77,7 @@ const Beranda = function () {
               <Image
                 src="/laboratorium.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -86,7 +86,7 @@ const Beranda = function () {
               <Image
                 src="/fisioterapi.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
@@ -95,7 +95,7 @@ const Beranda = function () {
               <Image
                 src="/klinik vct-cst.png"
                 alt="icon"
-                className="w-24 lg:w-24  h-20  hover:bg-[#3C44EE]  rounded-xl"
+                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
                 height={60}
               />
