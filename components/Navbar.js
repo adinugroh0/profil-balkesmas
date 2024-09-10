@@ -79,7 +79,7 @@ const Navbar = () => {
                 Maklumat Pelayanan
               </Link>
               <Link
-                href="/struktur-organisasi"
+                href="/StrukturOrganisasi"
                 className="block py-2 px-4  hover:bg-[#2c39e2] hover:text-white">
                 Struktur Organisasi
               </Link>
