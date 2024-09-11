@@ -211,7 +211,7 @@ const Navbar = () => {
         </div>
 
         <Link
-          href="/pendaftaran"
+          href="/PendaftaranOnline"
           className="text-black py-2 px-4 md:py-0 hover:text-blue-500">
           Pendaftaran Online
         </Link>
