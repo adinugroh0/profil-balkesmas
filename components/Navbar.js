@@ -188,22 +188,22 @@ const Navbar = () => {
                 : "opacity-0 invisible"
             }`}>
             <Link
-              href="/Sejarah"
+              href="/LatarBelakang"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Latar Belakang
             </Link>
             <Link
-              href="/Sejarah"
+              href="/Tujuan"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Tujuan
             </Link>
             <Link
-              href="/Visi-Misi"
+              href="/RuangLingkup"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Ruang Lingkup
             </Link>
             <Link
-              href="/MaklumatPelayanan"
+              href="/DasarHukum"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Dasar Hukum
             </Link>
