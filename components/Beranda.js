@@ -4,9 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Beranda = function () {
-  const [currentImage, setCurrentImage] = useState("/gambat beranda.png");
+  const [currentImage, setCurrentImage] = useState(
+    "/beranda/gambat beranda.png"
+  );
 
-  const images = ["/gambat beranda.png", "/gambarmagang2.png"];
+  const images = ["/beranda/gambat beranda.png", "/beranda/gambarmagang2.png"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,7 +40,7 @@ const Beranda = function () {
               Hubungi Kami
             </Link>
             <Image
-              src="/panahbawah.png"
+              src="/beranda/panahbawah.png"
               alt="icon"
               className="w-3 h-3"
               width={80}
@@ -48,7 +50,7 @@ const Beranda = function () {
           <div className="flex flex-wrap justify-center lg:justify-start  mt-4 p-4">
             <Link href="#">
               <Image
-                src="/pendafaran.png"
+                src="/beranda/pendafaran.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -57,7 +59,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/klinik anak.png"
+                src="/beranda/klinik anak.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -66,7 +68,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/klinik umum.png"
+                src="/beranda/klinik umum.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -75,7 +77,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/laboratorium.png"
+                src="/beranda/laboratorium.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -84,7 +86,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/fisioterapi.png"
+                src="/beranda/fisioterapi.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -93,7 +95,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/klinik vct-cst.png"
+                src="/beranda/klinik vct-cst.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
