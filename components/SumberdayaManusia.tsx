@@ -42,7 +42,7 @@ const SumberdayaManusia = () => {
             Lihat Data
           </Link>
           <Image
-            src="/panahbawah.png"
+            src="/beranda/panahbawah.png"
             alt="icon"
             className="w-3 h-3"
             width={80}

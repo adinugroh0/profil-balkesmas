@@ -129,32 +129,32 @@ const Navbar = () => {
                 : "opacity-0 invisible"
             }`}>
             <Link
-              href="/Sejarah"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Standart Pelayanan
             </Link>
             <Link
-              href="/Sejarah"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Alur Pelayanan Pasien Baru
             </Link>
             <Link
-              href="/Visi-Misi"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Alur Pelayanan Pasien Lama
             </Link>
             <Link
-              href="/MaklumatPelayanan"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Tarif Pelayanan
             </Link>
             <Link
-              href="/StrukturOrganisasi"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Laporan Pengaduan
             </Link>
             <Link
-              href="/SumberdayaManusia"
+              href="#"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Laporan SKM
             </Link>
