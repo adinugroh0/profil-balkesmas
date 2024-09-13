@@ -68,7 +68,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/beranda/Klinik umum.png"
+                src="/beranda/Klinik Umum.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}

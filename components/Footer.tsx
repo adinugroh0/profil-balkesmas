@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="flex flex-col lg:flex-row gap-3 justify-between p-5">
+      <div className="flex flex-col lg:flex-row gap-3 justify-around p-5">
         <div className="bg-[#3C44EE] flex flex-col justify-center items-center p-5 rounded-xl mx-full lg:w-80 text-center">
           <Image
             src="/footer/adress.png"
