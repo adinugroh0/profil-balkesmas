@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container mx-auto flex justify-between bg-white items-center sticky top-0 z-50 p-4">
+    <div className="container w-full mx-auto flex justify-between bg-white items-center sticky top-0 z-50 p-4">
       <Image
         src="/beranda/logo.png"
         alt="Logo"

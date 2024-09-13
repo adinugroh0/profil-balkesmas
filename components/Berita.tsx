@@ -22,7 +22,9 @@ const Berita = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-xl lg:text-3xl leading-tight mb-4">Berita Terbaru</h1>
+      <h1 className="text-xl lg:text-3xl leading-tight mb-4 placeholder p-7">
+        Berita Terbaru
+      </h1>
       {berita.map((item) => (
         <div key={item.id} className="mb-4">
           <h3 className="text-lg font-semibold">{item.judul}</h3>
