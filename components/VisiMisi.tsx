@@ -8,7 +8,7 @@ const VisiMisi = () => {
     <>
       <div className=" h-auto  w-full">
         <Image
-          src="/VisiMisibackground.png"
+          src="/visi-misi/VisiMisibackground.png"
           alt="Background Image"
           width={1920}
           height={1080}
