@@ -59,7 +59,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/beranda/klinik anak.png"
+                src="/beranda/Klinik anak.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -68,7 +68,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/beranda/klinik umum.png"
+                src="/beranda/Klinik umum.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
@@ -77,7 +77,7 @@ const Beranda = function () {
             </Link>
             <Link href="#">
               <Image
-                src="/beranda/laboratorium.png"
+                src="/beranda/Laboratorium.png"
                 alt="icon"
                 className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
                 width={80}
