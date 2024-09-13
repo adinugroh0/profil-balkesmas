@@ -10,6 +10,7 @@ const VisiMisi = () => {
         <Image
           src="/visi-misi/VisiMisibackground.png"
           alt="Background Image"
+          quality={75}
           width={1920}
           height={1080}
         />
@@ -29,7 +30,7 @@ const VisiMisi = () => {
           </div>
           <div className="flex justify-center">
             <Image
-              src="/visi gamar.png"
+              src="/visi-misi/visi gamar.png"
               alt="Background Image"
               className="w-2/3 "
               width={700}
@@ -42,7 +43,7 @@ const VisiMisi = () => {
         <div className="flex flex-col lg:flex-row justify-center">
           <div className="flex justify-center">
             <Image
-              src="/misi gambar.png"
+              src="/visi-misi/misi gambar.png"
               alt="Background Image"
               className="w-2/3 "
               width={700}
@@ -56,7 +57,7 @@ const VisiMisi = () => {
               </h1>
               <div className="flex gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain  "
                   width={500}
@@ -68,7 +69,7 @@ const VisiMisi = () => {
               </div>
               <div className="flex  gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain  "
                   width={500}
@@ -81,7 +82,7 @@ const VisiMisi = () => {
               </div>
               <div className="flex  gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain float-start "
                   width={500}
@@ -94,7 +95,7 @@ const VisiMisi = () => {
               </div>
               <div className="flex  gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain float-start "
                   width={500}
@@ -108,7 +109,7 @@ const VisiMisi = () => {
               </div>
               <div className="flex  gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain float-start "
                   width={500}
@@ -120,7 +121,7 @@ const VisiMisi = () => {
               </div>
               <div className="flex  gap-2">
                 <Image
-                  src="/ceklist.png"
+                  src="/visi-misi/ceklist.png"
                   alt="Background Image"
                   className="w-6 object-contain float-start "
                   width={500}
