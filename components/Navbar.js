@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <div className="container mx-auto flex justify-between bg-white items-center sticky top-0 z-50 p-4">
       <Image
-        src="/logo.png"
+        src="/beranda/logo.png"
         alt="Logo"
         className="w-44 h-12"
         width={458}
