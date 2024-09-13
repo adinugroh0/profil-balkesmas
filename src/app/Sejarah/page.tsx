@@ -8,7 +8,7 @@ const page = () => {
     <main className="flex min-h-screen w-full flex-col items-center  ">
       <div className=" h-auto  w-full">
         <Image
-          src="/backgroundsejarah.png"
+          src="/profil/backgroundsejarah.png"
           alt="Background Image"
           width={1920}
           height={1080}
@@ -91,7 +91,7 @@ const page = () => {
               Hadi Marhaento, SKM, M.Kes.{" "}
             </p>
             <Image
-              src="/vektorpimpinan.png"
+              src="/beranda/vektorpimpinan.png"
               alt="pimpinan bp4"
               className="hidden md:block w-44 h-44 rounded-lg"
               width={800}
