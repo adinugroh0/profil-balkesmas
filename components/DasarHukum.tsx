@@ -6,7 +6,7 @@ import Link from "next/link";
 const DasarHukum = () => {
   return (
     <>
-      <div className=" h-auto  w-full">
+      <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/dasarhukum/dasarhukum.png"
           alt="Background Image"

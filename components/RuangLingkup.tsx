@@ -6,7 +6,7 @@ import Link from "next/link";
 const RuangLingkup = () => {
   return (
     <>
-      <div className=" h-auto  w-full">
+      <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/ruanglingkup/ruanglingkup.png"
           alt="Background Image"

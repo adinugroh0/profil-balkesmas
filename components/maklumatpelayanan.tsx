@@ -6,7 +6,7 @@ import Link from "next/link";
 const MaklumatPelayanan = () => {
   return (
     <>
-      <div className=" h-auto  w-full">
+      <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/maklumatpelayanan/pelayanan.png"
           alt="Background Image"

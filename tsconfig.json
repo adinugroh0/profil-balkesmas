@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/Berita.js",
-    "components/Sejarah.js"
+    "components/Sejarah.js",
+    "src/app/AlurPelayananPasienLama"
   ],
   "exclude": ["node_modules"]
 }

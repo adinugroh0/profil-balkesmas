@@ -6,7 +6,7 @@ import Link from "next/link";
 const Tujuan = () => {
   return (
     <>
-      <div className=" h-auto  w-full">
+      <div className="flex h-auto  w-full items-center justify-center">
         <Image
           src="/tujuan/backgroundtujuan.png"
           alt="Background Image"

@@ -129,32 +129,37 @@ const Navbar = () => {
                 : "opacity-0 invisible"
             }`}>
             <Link
-              href="#"
+              href="/StandartPelayanan"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Standart Pelayanan
             </Link>
             <Link
-              href="#"
+              href="/SOP"
+              className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
+              SOP
+            </Link>
+            <Link
+              href="/AlurPelayananPasienBaru"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Alur Pelayanan Pasien Baru
             </Link>
             <Link
-              href="#"
+              href="/AlurPelayananPasienLama"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Alur Pelayanan Pasien Lama
             </Link>
             <Link
-              href="#"
+              href="/TarifPelayanan"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Tarif Pelayanan
             </Link>
             <Link
-              href="#"
+              href="/LaporanPengaduan"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Laporan Pengaduan
             </Link>
             <Link
-              href="#"
+              href="/LaporanSKM"
               className="block py-2 px-4 text-black hover:bg-[#2c39e2] hover:text-white">
               Laporan SKM
             </Link>

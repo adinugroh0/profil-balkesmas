@@ -6,7 +6,7 @@ import Link from "next/link";
 const VisiMisi = () => {
   return (
     <>
-      <div className=" h-auto  w-full">
+      <div className=" h-auto  w-full flex  items-center justify-center">
         <Image
           src="/visi-misi/VisiMisibackground.png"
           alt="Background Image"
