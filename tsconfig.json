@@ -29,7 +29,9 @@
     ".next/types/**/*.ts",
     "components/Berita.js",
     "components/Sejarah.js",
-    "src/app/AlurPelayananPasienLama"
+    "src/app/AlurPelayananPasienLama",
+    "components/Beranda.jsx",
+    "components/ui/hover-border-gradient.js"
   ],
   "exclude": ["node_modules"]
 }

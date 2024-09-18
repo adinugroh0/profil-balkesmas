@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 const Beranda = function () {
   const [currentImage, setCurrentImage] = useState(
@@ -35,73 +36,20 @@ const Beranda = function () {
             misi, fasilitas, berita terbaru, dan agenda kegiatan. Jelajahi
             bagaimana sejarah dan struktur organisasi kami.
           </p>
-          <div className="flex animate-bounce bg-[#3C44EE] w-full lg:w-44 h-14 items-center justify-center rounded-xl gap-2 mx-auto lg:mx-0 m-7 hover:drop-shadow-2xl">
-            <Link href="#" className="text-white">
-              Hubungi Kami
-            </Link>
-            <Image
-              src="/beranda/panahbawah.png"
-              alt="icon"
-              className="w-3 h-3"
-              width={80}
-              height={60}
-            />
-          </div>
-          <div className="flex flex-wrap justify-center lg:justify-start  mt-4 p-4">
-            <Link href="#">
-              <Image
-                src="/beranda/pendafaran.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/beranda/Klinik anak.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/beranda/Klinik Umum.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/beranda/Laboratorium.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/beranda/fisioterapi.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
-            <Link href="#">
-              <Image
-                src="/beranda/klinik vct-cst.png"
-                alt="icon"
-                className="w-24 lg:w-24  h-20  hover:border-x-2 hover:border-[#3C44EE]  rounded-xl"
-                width={80}
-                height={60}
-              />
-            </Link>
+          <div>
+            <HoverBorderGradient
+              containerClassName="border-4 animate-bounce transition duration-800 hover:animate-none top-5"
+              as="a"
+              href="/Visi-Misi"
+              className=" w-full lg:w-44 h-14 font-semibold gap-2 items-center justify-center rounded-xl hover:fill-white text-black hover:text-white flex  space-x-3">
+              <span>Hubungi Kami</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-3 h-3 hover:fill-white"
+                viewBox="0 0 384 512">
+                <path d="M169.4 502.6c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 402.7 224 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 370.7L86.6 329.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128z" />
+              </svg>
+            </HoverBorderGradient>
           </div>
         </div>
         <div className="mt-8 lg:mt-0">
@@ -118,4 +66,5 @@ const Beranda = function () {
     </>
   );
 };
+
 export default Beranda;
