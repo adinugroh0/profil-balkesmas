@@ -30,7 +30,7 @@ export function Beranda() {
           }}
           className="z-50 flex flex-col lg-flex-row justify-center items-center">
           <Image
-            src="/logopolos.png"
+            src="/beranda/logopolos.png"
             alt="Background Image"
             className="w-40"
             width={800}
