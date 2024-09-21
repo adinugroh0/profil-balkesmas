@@ -30,7 +30,7 @@
     "components/Berita.js",
     "components/Sejarah.js",
     "src/app/AlurPelayananPasienLama",
-    "components/Beranda.js",
+    "components/Beranda.tsx",
     "components/ui/hover-border-gradient.js"
   ],
   "exclude": ["node_modules"]
