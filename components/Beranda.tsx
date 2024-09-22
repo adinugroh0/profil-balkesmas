@@ -66,9 +66,9 @@ export function Beranda() {
           </Highlight>
         </motion.h1>
       </HeroHighlight>
-      <div className="flex flex-col lg:flex-row items-baseline justify-around gap-3 p-6">
+      <div className=" flex flex-col lg:flex-row  items-center justify-around gap-3 p-6">
         {/* klinik anak */}
-        <div className="group bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
           <div className="block">
             <svg
               className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -96,7 +96,7 @@ export function Beranda() {
           </Link>
         </div>
         {/* klinik Umum */}
-        <div className="group bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
           <div className="block">
             <svg
               className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -124,7 +124,7 @@ export function Beranda() {
           </Link>
         </div>
         {/*  Laboratorium */}
-        <div className="group bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className=" group bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
           <div className="block">
             <svg
               className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -152,7 +152,7 @@ export function Beranda() {
           </Link>
         </div>
         {/*  Fisioterapi */}
-        <div className="group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
           <div className="block">
             <svg
               className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -180,7 +180,7 @@ export function Beranda() {
           </Link>
         </div>
         {/*  Klinik vct-cst */}
-        <div className="group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
           <div className="block">
             <svg
               className="transition duration-300 stroke-[#2A8EE4] group-hover:stroke-white transform group-hover:scale-x-[-1]"

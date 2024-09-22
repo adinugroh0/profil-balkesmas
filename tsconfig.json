@@ -31,7 +31,8 @@
     "components/Sejarah.js",
     "src/app/AlurPelayananPasienLama",
     "components/Beranda.tsx",
-    "components/ui/hover-border-gradient.js"
+    "components/ui/hover-border-gradient.js",
+    "components/ui/navbar-menu.js"
   ],
   "exclude": ["node_modules"]
 }
