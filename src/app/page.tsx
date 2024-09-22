@@ -6,11 +6,15 @@ import TampilkanBerita from "@/components/TampilkanBerita";
 import Berita from "@/components/Berita";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { useInView } from "react-intersection-observer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
     <>
-      <Beranda />
+      <AnimatedSection>
+        <Beranda />
+      </AnimatedSection>
       <Berita />
       <TampilkanBerita />
     </>
