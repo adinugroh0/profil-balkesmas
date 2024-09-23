@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import MaklumatPelayanan from "@/components/maklumatpelayanan";
-import Navbar from "@/components/Navbar.1";
+import Navbar from "@/components/Navbar";
 import VisiMisi from "@/components/VisiMisi";
 import Image from "next/image";
 import React from "react";
