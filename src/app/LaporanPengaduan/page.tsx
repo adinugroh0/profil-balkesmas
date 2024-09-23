@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import LaporanPengaduan from "@/components/LaporanPengaduan";
-import Navbar from "@/components/Navbar.1";
+import Navbar from "@/components/Navbar";
 import Sop from "@/components/Sop";
 import StandartPelayanan from "@/components/StandartPelayanan";
 import VisiMisi from "@/components/VisiMisi";

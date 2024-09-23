@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar.1";
+import Navbar from "@/components/Navbar";
 import StandartPelayanan from "@/components/StandartPelayanan";
 import TarifPelayanan from "@/components/TarifPelayanan";
 import VisiMisi from "@/components/VisiMisi";
