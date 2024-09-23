@@ -74,6 +74,32 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/DasarHukum">Dasar Hukum</HoveredLink>
           </div>
         </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Lainnya">
+          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+            <ProductItem
+              title="PENDAFTARAN ONLINE"
+              href="/PendaftaranOnline"
+              src="/image 10.png"
+              description="Profil Balkesmas Wilayah Semarang."
+            />
+          </div>
+          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+            <ProductItem
+              title="BERITA"
+              href="/"
+              src="/BRITA.png"
+              description="Berita Balkesmas Wilayah Semarang."
+            />
+          </div>
+          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+            <ProductItem
+              title="PENGADUAN"
+              href="/https://laporgub.jatengprov.go.id/"
+              src="/aduan.png"
+              description="Portal Laporan Pengaduan Online Provinsi Jawa Tengah"
+            />
+          </div>
+        </MenuItem>
       </Menu>
     </div>
   );

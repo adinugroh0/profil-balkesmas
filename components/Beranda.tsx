@@ -6,6 +6,7 @@ import { ImagesSlider } from "./ui/images-slider";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import AnimatedSection from "../components/AnimatedSection";
+import Footer from "./Footer";
 
 export function Beranda() {
   const imageUrls = [
@@ -13,6 +14,12 @@ export function Beranda() {
     "https://th.bing.com/th/id/OIP.mBuiA0eh1H370KH4XR2lXgHaFj?rs=1&pid=ImgDetMain",
     "https://th.bing.com/th/id/OIP.JAdCsuYM81tRTlOqjLDX1wHaDs?rs=1&pid=ImgDetMain",
   ];
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -40,7 +47,10 @@ export function Beranda() {
           <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
             BALKESMAS <br /> WILAYAH SEMARANG
           </motion.p>
-          <button className="px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4 hover:bg-blue-600 transition duration-1000 ">
+
+          <button
+            onClick={scrollToBottom}
+            className="px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4 hover:bg-blue-600 transition duration-1000 ">
             <span>Hubungi Kami →</span>
             <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent  to-transparent" />
           </button>
@@ -237,6 +247,7 @@ export function Beranda() {
           </div>
         </div>
       </AnimatedSection>
+      <Footer />
     </>
   );
 }
