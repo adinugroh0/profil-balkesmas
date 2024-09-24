@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <footer id="footer" className="bg-[#2A8EE4] text-white py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-8  justify-around text-center">
+          <div className="flex flex-col lg:flex-row gap-8 items-center justify-center text-center">
             <div>
               <h3 className="text-xl font-semibold mb-4">Address</h3>
               <a

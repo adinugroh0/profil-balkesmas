@@ -6,6 +6,7 @@ import { ImagesSlider } from "./ui/images-slider";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import AnimatedSection from "../components/AnimatedSection";
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Footer from "./Footer";
 
 export function Beranda() {
@@ -247,6 +248,61 @@ export function Beranda() {
           </div>
         </div>
       </AnimatedSection>
+      {/*  card tujuan */}
+      <AnimatedSection>
+        <CardContainer className="  w-full h-screen">
+          <CardBody className="w-11/12 h-screen bg-[#D4E8FA] flex flex-col lg:flex-row  items-center justify-around group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]   rounded-xl p-6 border  ">
+            <div className="flex flex-col gap-9">
+              <CardItem
+                translateZ="50"
+                className="bg-[#A1CDF3] rounded-lg p-2 font-bold text-[#0014CA]">
+                TENTANG BALKESMAS
+              </CardItem>
+              <CardItem
+                translateZ="50"
+                className="text-3xl font-bold text-[#000000] dark:text-white">
+                Tujuan Balai <br /> Kesehatan Masyarakat <br /> Wilayah Semarang
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500  text-sm max-w-xl mt-3 dark:text-neutral-300">
+                <ol className="list-decimal mt-9 flex flex-col gap-4">
+                  <li>
+                    Memberikan gambaran singkat tentang ketersediaan sumber daya
+                    manusia kesehatan menurut jenis dan jumlahnya.
+                  </li>
+                  <li>
+                    Mendapatkan gambaran kecukupan jenis dan jumlah SDM
+                    Kesehatan dibandingkan dengan hasil perhitungan perencanaan
+                    kebutuhan SDM Kesehatan dengan menggunakan metode ABK
+                    Kesehatan dan standart minimal ketenagaan.
+                  </li>
+                  <li>
+                    Menjadi acuan dalam meningkatkan pemerataan SDM Kesehatan.
+                  </li>
+                  <li>
+                    Menjadi acuan dalam perencanaan, Pendayagunaan dan
+                    Pemberdayaan Sumber Daya Manusia Kesehatan. 
+                  </li>
+                </ol>
+              </CardItem>
+            </div>
+            <div>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <Image
+                  src="/beranda/gambartujuan.png"
+                  height="800"
+                  width="800"
+                  className=" w-96 object-cover group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+            </div>
+          </CardBody>
+        </CardContainer>
+      </AnimatedSection>
+
       <Footer />
     </>
   );
