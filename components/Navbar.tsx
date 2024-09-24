@@ -94,7 +94,7 @@ function Navbar({ className }: { className?: string }) {
           <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
             <ProductItem
               title="PENGADUAN"
-              href="/https://laporgub.jatengprov.go.id/"
+              href="https://laporgub.jatengprov.go.id/"
               src="/aduan.png"
               description="Portal Laporan Pengaduan Online Provinsi Jawa Tengah"
             />
