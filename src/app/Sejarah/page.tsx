@@ -14,8 +14,8 @@ const page = () => {
           height={1080}
         />
       </div>
-      <div className="flex items-center justify-center bg-white  p-5 rounded-md -mt-28 md:flex-row md:w-1/2 ">
-        <div className="flex justify-center flex-col gap-6 p-5 relative md:w-8/12 items-center ">
+      <div className="flex items-center justify-center bg-white  p-5 rounded-md  md:flex-row md:w-1/2 ">
+        <div className="flex justify-center flex-col gap-6 p-5 relative  items-center ">
           <p className="">
             Balkesmas Wilayah Semarang didirikan pertama kali pada tanggal 2
             September 1962, dengan nama Balai Pemberantasan Penyakit Paru-paru
@@ -72,7 +72,7 @@ const page = () => {
         </h1>
         <div>
           <div
-            className="flex flex-col md:flex-row items-center justify-between p-5
+            className="flex flex-col md:flex-row items-center justify-center p-5
           ">
             <p className="md:w-7/12">
               Tahun 1962 – 1970, dipimpin oleh dr. R. Soemartono, Ahli Paru-paru{" "}
