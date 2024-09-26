@@ -99,7 +99,7 @@ export function Beranda() {
                 />
               </svg>
             </div>
-            <Link href={"/klinik-anak"}>
+            <Link href={"/KlinikAnak"}>
               <div className="flex flex-col gap-4">
                 <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
                   Klinik Anak
@@ -165,7 +165,7 @@ export function Beranda() {
                 />
               </svg>
             </div>
-            <Link href={"/klinik-anak"}>
+            <Link href={"/KlinikAnak"}>
               <div className="flex flex-col gap-4">
                 <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
                   Laboratorium
@@ -264,10 +264,10 @@ export function Beranda() {
                 Tujuan Balai <br /> Kesehatan Masyarakat <br /> Wilayah Semarang
               </CardItem>
               <CardItem
-                as="p"
+                as="ul"
                 translateZ="60"
                 className="text-neutral-500  text-sm max-w-xl mt-3 dark:text-neutral-300">
-                <ol className="list-decimal mt-9 flex flex-col gap-4">
+                <ul className="list-decimal mt-9 flex flex-col gap-4">
                   <li>
                     Memberikan gambaran singkat tentang ketersediaan sumber daya
                     manusia kesehatan menurut jenis dan jumlahnya.
@@ -285,7 +285,7 @@ export function Beranda() {
                     Menjadi acuan dalam perencanaan, Pendayagunaan dan
                     Pemberdayaan Sumber Daya Manusia Kesehatan. 
                   </li>
-                </ol>
+                </ul>
               </CardItem>
             </div>
             <div>
