@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { useInView } from "react-intersection-observer";
 import AnimatedSection from "@/components/AnimatedSection";
+import React from "react";
 
 export default function Home() {
   return (

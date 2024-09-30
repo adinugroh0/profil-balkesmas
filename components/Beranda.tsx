@@ -8,6 +8,7 @@ import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import AnimatedSection from "../components/AnimatedSection";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Footer from "./Footer";
+import React from "react";
 
 export function Beranda() {
   const imageUrls = [
@@ -231,7 +232,7 @@ export function Beranda() {
                 />
               </svg>
             </div>
-            <Link href={"/klinik-anak"}>
+            <Link href={"/VctCst"}>
               <div className="flex flex-col gap-4">
                 <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
                   VCT-CST
