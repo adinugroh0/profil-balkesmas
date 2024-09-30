@@ -165,7 +165,7 @@ export function Beranda() {
                 />
               </svg>
             </div>
-            <Link href={"/KlinikAnak"}>
+            <Link href={"/Laboratorium"}>
               <div className="flex flex-col gap-4">
                 <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
                   Laboratorium
@@ -198,7 +198,7 @@ export function Beranda() {
                 />
               </svg>
             </div>
-            <Link href={"/klinik-anak"}>
+            <Link href={"/Fisioterapi"}>
               <div className="flex flex-col gap-4">
                 <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
                   Fisioterapi
