@@ -4,7 +4,7 @@ const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["assets.aceternity.com,i.imgur.com "],
+    domains: ["assets.aceternity.com,i.imgur.com, via.placeholder.com "],
   },
 
   webpack: (config, { isServer }) => {

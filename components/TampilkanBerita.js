@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import { db } from "@/lib/firebase"; // Pastikan import db sudah benar
+import { db } from "@/src/lib/firebaseConfig"; // Pastikan import db sudah benar
 import Image from "next/image";
 
 const TampilkanBerita = () => {

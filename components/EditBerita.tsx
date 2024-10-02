@@ -3,7 +3,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db } from "@/src/lib/firebaseConfig";
 
 interface EditBeritaProps {
   id: string;

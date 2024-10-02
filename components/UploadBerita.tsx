@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db, storage } from "@/lib/firebase";
+import { db, storage } from "@/src/lib/firebaseConfig";
 
 const UploadBerita = () => {
   const [judul, setJudul] = useState("");
