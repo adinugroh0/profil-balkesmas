@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const VisiMisi = () => {
   return (
-    <>
+    <div>
       <div className=" h-auto  w-full flex  items-center justify-center">
         <Image
           src="/visi-misi/VisiMisibackground.png"
@@ -137,7 +137,7 @@ const VisiMisi = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

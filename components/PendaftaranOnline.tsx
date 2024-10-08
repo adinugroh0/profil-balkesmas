@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const PendaftaranOnline = () => {
   return (
-    <>
+    <div>
       <div className=" h-auto  w-full flex flex-col  justify-center items-center gap-8 p-24">
         <h1 className="text-4xl font-extrabold  underline underline-offset-4">
           POLES BALSEM
@@ -27,7 +27,7 @@ const PendaftaranOnline = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

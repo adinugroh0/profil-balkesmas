@@ -32,7 +32,8 @@
     "src/app/AlurPelayananPasienLama",
     "components/Beranda.tsx",
     "components/ui/hover-border-gradient.js",
-    "components/ui/navbar-menu.js"
+    "components/ui/navbar-menu.js",
+    "src/app/UploadNews"
   ],
   "exclude": ["node_modules"]
 }

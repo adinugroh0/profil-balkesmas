@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const StrukturOrganisasi = () => {
   return (
-    <>
+    <div>
       <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/strukturorganisasi/struktur.png"
@@ -250,7 +250,7 @@ const StrukturOrganisasi = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

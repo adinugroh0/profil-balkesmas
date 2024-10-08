@@ -6,7 +6,7 @@ import PendaftaranOnline from "./PendaftaranOnline";
 
 const PasienBaru = () => {
   return (
-    <>
+    <div>
       <div className=" h-auto  w-full flex flex-col  justify-around lg:flex-row items-center gap-8 p-24">
         <div>
           <Image
@@ -122,7 +122,7 @@ const PasienBaru = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

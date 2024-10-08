@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SumberdayaManusia = () => {
   return (
-    <>
+    <div>
       <div className="flex h-auto w-full items-center justify-center">
         <Image
           src="/sumberdayamanusia/sumberdayamanusia.png"
@@ -50,7 +50,7 @@ const SumberdayaManusia = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const RuangLingkup = () => {
   return (
-    <>
+    <div>
       <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/ruanglingkup/ruanglingkup.png"
@@ -27,7 +27,7 @@ const RuangLingkup = () => {
           Kesehatan (ABK Kesehatan) dan Metode Standart Ketenagaan Minimal.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

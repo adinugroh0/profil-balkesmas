@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const MaklumatPelayanan = () => {
   return (
-    <>
+    <div>
       <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/maklumatpelayanan/pelayanan.png"
@@ -51,7 +51,7 @@ const MaklumatPelayanan = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

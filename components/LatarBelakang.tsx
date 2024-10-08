@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const MaklumatPelayanan = () => {
   return (
-    <>
+    <div>
       <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/latarbelakang/latarbelakang.png"
@@ -133,7 +133,7 @@ const MaklumatPelayanan = () => {
           tertuang dalam rencana strategis kementerian kesehatan 2015-2019.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

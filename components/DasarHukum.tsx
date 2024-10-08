@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const DasarHukum = () => {
   return (
-    <>
+    <div>
       <div className=" flex h-auto  w-full items-center justify-center">
         <Image
           src="/dasarhukum/dasarhukum.png"
@@ -83,7 +83,7 @@ const DasarHukum = () => {
           Tengah.
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

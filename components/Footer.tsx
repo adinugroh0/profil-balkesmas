@@ -6,7 +6,7 @@ import { PinContainer } from "./ui/3d-pin";
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <footer id="footer" className="bg-[#2A8EE4] text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8  justify-center text-center">
@@ -129,7 +129,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
