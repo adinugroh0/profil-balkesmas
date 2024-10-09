@@ -4,7 +4,12 @@ const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["assets.aceternity.com,i.imgur.com, via.placeholder.com "],
+    domains: [
+      "assets.aceternity.com",
+      "i.imgur.com",
+      "via.placeholder.com",
+      "aixcdqvecwvpjbzvbduy.supabase.co", // Tambahkan domain Supabase di sini
+    ],
   },
 
   webpack: (config, { isServer }) => {

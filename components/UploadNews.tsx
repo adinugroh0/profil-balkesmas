@@ -82,46 +82,71 @@ export default function UploadNews() {
   };
 
   return (
-    <div>
-      <h1>Upload Berita</h1>
+    <div className="max-w-2xl mx-auto  bg-white shadow-md rounded-lg p-7">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 p-11 ">
+        Upload Berita
+      </h1>
       <form onSubmit={handleUpload}>
-        <div>
-          <label>Judul:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Judul:
+          </label>
           <input
             type="text"
             name="title"
             value={formData.title}
             onChange={handleChange}
             required
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
-        <div>
-          <label>Konten:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Konten:
+          </label>
           <textarea
             name="content"
             value={formData.content}
             onChange={handleChange}
             required
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
-        <div>
-          <label>Penulis:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Penulis:
+          </label>
           <input
             type="text"
             name="author"
             value={formData.author}
             onChange={handleChange}
             required
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
           />
         </div>
-        <div>
-          <label>Gambar:</label>
-          <input type="file" accept="image/*" onChange={handleImageChange} />
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Gambar:
+          </label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+          />
         </div>
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          disabled={loading}
+          className={`w-full px-4 py-2 text-white font-bold rounded-lg transition duration-300 ease-in-out ${
+            loading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700"
+          }`}>
           {loading ? "Uploading..." : "Upload Berita"}
         </button>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="mt-4 text-center text-red-600">{error}</p>}
       </form>
     </div>
   );

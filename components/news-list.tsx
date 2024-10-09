@@ -1,3 +1,4 @@
+// components/NewsList.tsx
 "use client"; // Penanda bahwa ini adalah Client Component
 
 import { useEffect, useState } from "react";
@@ -24,16 +25,21 @@ export default function NewsList() {
       setError(null);
 
       try {
-        // Ambil data berita dari tabel "news"
-        const { data, error } = await supabase
+        // Pastikan nama tabel sesuai dengan yang ada di Supabase
+        const { data, error, status } = await supabase
           .from("news")
           .select("*")
           .order("created_at", { ascending: false });
 
-        if (error) throw new Error(error.message);
+        if (error && status !== 406) {
+          // 406 Not Acceptable bisa diabaikan
+          console.error("Error fetching data:", error, "Status:", status);
+          throw new Error(error.message);
+        }
 
         setNews(data || []);
       } catch (error) {
+        console.error("Caught error:", error);
         setError("Error fetching news.");
       } finally {
         setLoading(false);
@@ -69,7 +75,9 @@ export default function NewsList() {
                 <Image
                   src={item.image_url}
                   alt={item.title}
-                  style={{ width: "300px", height: "auto" }}
+                  width={300}
+                  height={200}
+                  style={{ objectFit: "cover" }}
                 />
               )}
               <p>

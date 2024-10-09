@@ -7,13 +7,13 @@ import Image from "next/image";
 import React from "react";
 import UploadNews from "@/components/UploadNews";
 import NewsList from "@/components/news-list";
+import NewsDashboard from "@/components/NewsDashboard";
 
 function page() {
   return (
     <>
       <div>
-        <UploadNews />
-        <NewsList />
+        <NewsDashboard />
       </div>
     </>
   );
