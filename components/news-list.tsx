@@ -58,34 +58,44 @@ export default function NewsList() {
   }
 
   return (
-    <div>
-      <h1>Daftar Berita</h1>
+    <div className="max-w-5xl mx-auto py-10">
+      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
+        Daftar Berita
+      </h1>
       {news.length === 0 ? (
-        <p>Tidak ada berita.</p>
+        <p className="text-center text-gray-500">Tidak ada berita.</p>
       ) : (
-        <ul>
+        <ul className="space-y-8">
           {news.map((item) => (
-            <li key={item.id}>
-              <h2>{item.title}</h2>
-              <p>{item.content}</p>
-              <p>
-                <strong>Penulis:</strong> {item.author}
-              </p>
+            <li
+              key={item.id}
+              className="bg-white shadow-md rounded-lg p-6 flex flex-col lg:flex-row gap-6 lg:gap-10 items-start transition transform hover:scale-105 hover:shadow-lg">
               {item.image_url && (
-                <Image
-                  src={item.image_url}
-                  alt={item.title}
-                  width={300}
-                  height={200}
-                  style={{ objectFit: "cover" }}
-                />
+                <div className="flex-shrink-0 w-full lg:w-1/3">
+                  <Image
+                    src={item.image_url}
+                    alt={item.title}
+                    width={300}
+                    height={200}
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+                </div>
               )}
-              <p>
-                <em>
-                  Dibuat pada: {new Date(item.created_at).toLocaleDateString()}
-                </em>
-              </p>
-              <hr />
+              <div className="flex flex-col justify-center m-7">
+                <h2 className="text-3xl font-semibold text-gray-800 mb-2">
+                  {item.title}
+                </h2>
+                <p className="text-gray-600 mb-4">{item.content}</p>
+                <p className="text-gray-500 mb-4">
+                  <strong>Penulis:</strong> {item.author}
+                </p>
+                <p className="text-gray-400 text-sm">
+                  <em>
+                    Dibuat pada:{" "}
+                    {new Date(item.created_at).toLocaleDateString()}
+                  </em>
+                </p>
+              </div>
             </li>
           ))}
         </ul>

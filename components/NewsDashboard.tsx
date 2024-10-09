@@ -132,7 +132,7 @@ export default function NewsDashboard() {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className=" bg-gray-100 min-h-screen flex flex-col justify-center items-center p-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">
         Dashboard Berita
       </h1>

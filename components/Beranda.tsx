@@ -9,6 +9,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Footer from "./Footer";
 import React from "react";
+import NewsList from "./news-list";
 
 export function Beranda() {
   const imageUrls = [
@@ -303,6 +304,7 @@ export function Beranda() {
           </CardBody>
         </CardContainer>
       </AnimatedSection>
+      <NewsList />
 
       <Footer />
     </>
