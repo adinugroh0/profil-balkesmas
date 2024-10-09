@@ -25,7 +25,7 @@ const Berita = () => {
   }, []);
 
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <h1 className="text-xl lg:text-3xl leading-tight mb-4 placeholder p-7">
         Berita Terbaru
       </h1>

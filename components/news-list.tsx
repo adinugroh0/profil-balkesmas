@@ -58,48 +58,52 @@ export default function NewsList() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
-        Daftar Berita
-      </h1>
-      {news.length === 0 ? (
-        <p className="text-center text-gray-500">Tidak ada berita.</p>
-      ) : (
-        <ul className="space-y-8">
-          {news.map((item) => (
-            <li
-              key={item.id}
-              className="bg-white shadow-md rounded-lg p-6 flex flex-col lg:flex-row gap-6 lg:gap-10 items-start transition transform hover:scale-105 hover:shadow-lg">
-              {item.image_url && (
-                <div className="flex-shrink-0 w-full lg:w-1/3">
-                  <Image
-                    src={item.image_url}
-                    alt={item.title}
-                    width={300}
-                    height={200}
-                    className="rounded-lg object-cover w-full h-full"
-                  />
+    <div className="bg-[#2A8EE4]">
+      <div className="max-w-5xl mx-auto py-10 flex flex-col justify-center items-center gap-3">
+        <div className="rounded-lg bg-[#7FBBEF] flex justify-center text-center  w-64 items-cente p-2">
+          <h1 className=" font-bold text-center text-[#0014CA] ">
+            Berita Dan Kegiatan
+          </h1>
+        </div>
+        <h1 className="text-4xl font-bold text-center text-white mb-8">
+          Informasi Dan Dokumentasi Kegiatan
+        </h1>
+        {news.length === 0 ? (
+          <p className="text-center text-gray-500">Tidak ada berita.</p>
+        ) : (
+          <ul className="space-y-8">
+            {news.map((item) => (
+              <li
+                key={item.id}
+                className="bg-[#2A8EE4] shadow-md rounded-lg p-6 flex flex-col lg:flex-row gap-6 lg:gap-10 items-start transition transform hover:scale-105 hover:shadow-lg">
+                {item.image_url && (
+                  <div className="flex-shrink-0 w-full lg:w-1/3">
+                    <Image
+                      src={item.image_url}
+                      alt={item.title}
+                      width={300}
+                      height={200}
+                      className="rounded-lg object-cover w-full h-full"
+                    />
+                  </div>
+                )}
+                <div className="flex flex-col justify-center m-7">
+                  <h2 className="text-3xl font-semibold text-white mb-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-white italic mb-4">{item.content}</p>
+                  <p className="text-white italic mb-4">
+                    <strong>Penulis:</strong> {item.author}
+                  </p>
+                  <p className="text-white text-sm">
+                    <em> {new Date(item.created_at).toLocaleDateString()}</em>
+                  </p>
                 </div>
-              )}
-              <div className="flex flex-col justify-center m-7">
-                <h2 className="text-3xl font-semibold text-gray-800 mb-2">
-                  {item.title}
-                </h2>
-                <p className="text-gray-600 mb-4">{item.content}</p>
-                <p className="text-gray-500 mb-4">
-                  <strong>Penulis:</strong> {item.author}
-                </p>
-                <p className="text-gray-400 text-sm">
-                  <em>
-                    Dibuat pada:{" "}
-                    {new Date(item.created_at).toLocaleDateString()}
-                  </em>
-                </p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
