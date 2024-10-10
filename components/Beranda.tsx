@@ -305,8 +305,6 @@ export function Beranda() {
         </CardContainer>
       </AnimatedSection>
       <NewsList />
-
-      <Footer />
     </>
   );
 }

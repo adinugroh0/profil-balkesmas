@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Beranda from "../../components/Beranda";
 import Footer from "@/components/Footer";
+import Head from "next/head"; // Mengimpor Head dari next/head
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.png" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
+        <Footer />{" "}
       </body>
     </html>
   );
