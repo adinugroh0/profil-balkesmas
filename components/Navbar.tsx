@@ -7,7 +7,7 @@ import { cn } from "@/src/lib/utils";
 
 export function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center ">
       <Navbar className="top-2" />
       <p className="text-black dark:text-white">
         The Navbar will show on top of the page
@@ -19,10 +19,14 @@ export function NavbarDemo() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className={cn("fixed  inset-x-0 max-w-2xl mx-auto z-50", className)}>
+    <div
+      className={cn(
+        "fixed inset-x-0 z-50 backdrop-blur-md bg-[#2A8EE4]/30 border-[#2A8EE4]/20",
+        className
+      )}>
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Beranda">
-          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+          <div className="text-sm grid-cols-2 gap-10 p-4 flex items-center  ">
             <ProductItem
               title="Balkesmas Wilayah Semarang"
               href="/"
@@ -32,17 +36,17 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Profil">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex flex-col space-y-4 text-sm ">
             <HoveredLink href="/Sejarah">Sejarah</HoveredLink>
             <HoveredLink href="/Visi-Misi">Visi - Misi</HoveredLink>
             <HoveredLink href="/MaklumatPelayanan">
               Maklumat Pelayanan
             </HoveredLink>
             <HoveredLink href="/StrukturOrganisasi">
-              Struktur Organisai
+              Struktur Organisasi
             </HoveredLink>
             <HoveredLink href="/SumbarDayaManusia">
-              Sumbar Daya Manusia
+              Sumber Daya Manusia
             </HoveredLink>
           </div>
         </MenuItem>
@@ -65,7 +69,6 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/LaporanSKM">Laporan SKM</HoveredLink>
           </div>
         </MenuItem>
-
         <MenuItem setActive={setActive} active={active} item="Informasi">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/LatarBelakang">Latar Belakang</HoveredLink>
@@ -75,7 +78,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Lainnya">
-          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+          <div className="text-sm grid-cols-2 gap-10 p-4 flex items-center">
             <ProductItem
               title="PENDAFTARAN ONLINE"
               href="/PendaftaranOnline"
@@ -83,7 +86,7 @@ function Navbar({ className }: { className?: string }) {
               description="Profil Balkesmas Wilayah Semarang."
             />
           </div>
-          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+          <div className="text-sm grid-cols-2 gap-10 p-4 flex items-center">
             <ProductItem
               title="BERITA"
               href="/"
@@ -91,7 +94,7 @@ function Navbar({ className }: { className?: string }) {
               description="Berita Balkesmas Wilayah Semarang."
             />
           </div>
-          <div className="  text-sm grid-cols-2 gap-10 p-4 flex  items-center">
+          <div className="text-sm grid-cols-2 gap-10 p-4 flex items-center">
             <ProductItem
               title="PENGADUAN"
               href="https://laporgub.jatengprov.go.id/"
