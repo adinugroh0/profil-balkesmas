@@ -10,7 +10,11 @@ interface NewsFormData {
   image: File | null;
 }
 
-export default function UploadNews() {
+interface UploadNewsProps {
+  onNewsAdded: (count: number) => void; // Menambahkan prop untuk callback
+}
+
+export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   const [formData, setFormData] = useState<NewsFormData>({
     title: "",
     content: "",
@@ -42,7 +46,6 @@ export default function UploadNews() {
 
       // Upload image if it exists
       if (formData.image) {
-        // Buat nama unik dengan menambahkan timestamp ke nama file
         const fileName = `${Date.now()}_${formData.image.name}`;
         const { data: imageData, error: imageError } = await supabase.storage
           .from("news-images")
@@ -50,7 +53,6 @@ export default function UploadNews() {
 
         if (imageError) throw new Error(imageError.message);
 
-        // Ambil URL publik dari gambar yang sudah di-upload
         if (imageData) {
           const { data } = supabase.storage
             .from("news-images")
@@ -66,11 +68,14 @@ export default function UploadNews() {
           title: formData.title,
           content: formData.content,
           author: formData.author,
-          image_url: imageUrl, // URL gambar yang di-upload
+          image_url: imageUrl,
         },
       ]);
 
       if (error) throw new Error(error.message);
+
+      // Memanggil onNewsAdded untuk memperbarui jumlah berita
+      onNewsAdded(1); // Menganggap satu berita telah ditambahkan
 
       // Reset form fields
       setFormData({ title: "", content: "", author: "", image: null });
@@ -82,8 +87,8 @@ export default function UploadNews() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto  bg-white shadow-md rounded-lg p-7">
-      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 p-11 ">
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 p-11">
         Upload Berita
       </h1>
       <form onSubmit={handleUpload}>

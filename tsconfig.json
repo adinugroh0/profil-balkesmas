@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "components/Berita.js",
     "components/Sejarah.js",
-    "src/app/AlurPelayananPasienLama",
+    "src/app/(public)/AlurPelayananPasienLama",
     "components/Beranda.tsx",
     "components/ui/hover-border-gradient.js",
     "components/ui/navbar-menu.js",

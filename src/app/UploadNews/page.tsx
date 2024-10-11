@@ -12,7 +12,11 @@ function page() {
   return (
     <>
       <div>
-        <UploadNews />
+        <UploadNews
+          onNewsAdded={function (count: number): void {
+            throw new Error("Function not implemented.");
+          }}
+        />
         <NewsList />
       </div>
     </>

@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import AnimatedSection from "@/components/AnimatedSection";
 import React from "react";
 import { supabase } from "@/src/lib/supabaseClient";
-import UploadNews from "./UploadNews/page";
+import UploadNews from "../UploadNews/page";
 import NewsList from "@/components/news-list";
 
 export default function Home() {
