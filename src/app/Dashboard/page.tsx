@@ -19,7 +19,13 @@ export default function DashboardPage() {
       case "home":
         return <Roro />;
       case "tambah-berita":
-        return <UploadNews onNewsAdded={handleNewsCountChange} />;
+        return (
+          <UploadNews
+            onNewsAdded={function (count: number): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        );
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
       default:

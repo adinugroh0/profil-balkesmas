@@ -151,7 +151,6 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
           }`}>
           {loading ? "Uploading..." : "Upload Berita"}
         </button>
-        {error && <p className="mt-4 text-center text-red-600">{error}</p>}
       </form>
     </div>
   );
