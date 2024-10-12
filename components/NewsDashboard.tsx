@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/src/lib/supabaseClient";
 
 interface NewsItem {
@@ -8,7 +6,6 @@ interface NewsItem {
   title: string;
   content: string;
   author: string;
-  image_url: string;
   created_at: string;
 }
 
@@ -27,7 +24,6 @@ export default function NewsDashboard({
     title: "",
     content: "",
     author: "",
-    image: null as File | null,
   });
 
   // Mengambil berita dari database
@@ -44,7 +40,7 @@ export default function NewsDashboard({
       if (error) throw new Error(error.message);
 
       setNews(data || []);
-      onNewsCountChange(data?.length || 0); // Update jumlah berita
+      onNewsCountChange(data?.length || 0);
     } catch (error) {
       setError("Error fetching news.");
     } finally {
@@ -54,7 +50,7 @@ export default function NewsDashboard({
 
   useEffect(() => {
     fetchNews();
-  }, [fetchNews]); // Pastikan efek ini hanya dipanggil saat fetchNews berubah
+  }, [fetchNews]);
 
   // Fungsi hapus berita
   const handleDelete = async (id: number) => {
@@ -76,7 +72,6 @@ export default function NewsDashboard({
       title: item.title,
       content: item.content,
       author: item.author,
-      image: null,
     });
   };
 
