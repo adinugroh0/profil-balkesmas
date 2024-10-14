@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { supabase } from "@/src/lib/supabaseClient";
+import Image from "next/image";
 
 interface NewsFormData {
   title: string;
@@ -23,6 +24,7 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,6 +36,13 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
     setFormData((prev) => ({ ...prev, image: file }));
+
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setPreviewImage(imageUrl);
+    } else {
+      setPreviewImage(null);
+    }
   };
 
   const handleUpload = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -79,6 +88,7 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
 
       // Reset form fields
       setFormData({ title: "", content: "", author: "", image: null });
+      setPreviewImage(null);
     } catch (error) {
       setError("Error uploading news.");
     } finally {
@@ -87,71 +97,96 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 p-11">
         Upload Berita
       </h1>
-      <form onSubmit={handleUpload}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Judul:
-          </label>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
-          />
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Image Preview */}
+        <div>
+          <div className="flex flex-col md:flex-row  gap-4">
+            {/* Input untuk mengunggah gambar, disembunyikan */}
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleImageChange}
+              className="hidden" // Sembunyikan input file
+              id="imageInput"
+            />
+
+            {/* Preview gambar yang bisa di-klik untuk memicu input gambar */}
+            <div
+              className="w-full  flex items-center justify-center border border-dashed border-gray-300 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-blue-500"
+              onClick={() => document.getElementById("imageInput")?.click()} // Trigger klik pada input file
+            >
+              {previewImage ? (
+                <Image
+                  src={previewImage}
+                  alt="Preview"
+                  className="rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
+                  width={150}
+                  height={150}
+                />
+              ) : (
+                <div className="w-36 h-36 flex items-center justify-center">
+                  <span className="text-gray-500">
+                    Klik untuk mengunggah gambar
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Konten:
-          </label>
-          <textarea
-            name="content"
-            value={formData.content}
-            onChange={handleChange}
-            required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
-          />
+
+        {/* Form Section */}
+        <div className="w-full md:w-2/3">
+          <form onSubmit={handleUpload}>
+            <div className="mb-4">
+              <input
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                required
+                placeholder="Masukkan judul berita"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <textarea
+                name="content"
+                value={formData.content}
+                onChange={handleChange}
+                required
+                placeholder="Masukkan konten berita"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                type="text"
+                name="author"
+                value={formData.author}
+                onChange={handleChange}
+                required
+                placeholder="Masukkan nama penulis"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className={`w-full px-4 py-2 text-white font-bold rounded-lg transition duration-300 ease-in-out ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}>
+              {loading ? "Uploading..." : "Upload Berita"}
+            </button>
+          </form>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Penulis:
-          </label>
-          <input
-            type="text"
-            name="author"
-            value={formData.author}
-            onChange={handleChange}
-            required
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Gambar:
-          </label>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
-          />
-        </div>
-        <button
-          type="submit"
-          disabled={loading}
-          className={`w-full px-4 py-2 text-white font-bold rounded-lg transition duration-300 ease-in-out ${
-            loading
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
-          }`}>
-          {loading ? "Uploading..." : "Upload Berita"}
-        </button>
-      </form>
+      </div>
     </div>
   );
 }

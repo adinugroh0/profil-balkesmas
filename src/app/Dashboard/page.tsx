@@ -11,7 +11,11 @@ export default function DashboardPage() {
 
   // Fungsi untuk menangani perubahan jumlah berita
   const handleNewsCountChange = (count: number) => {
-    setNewsCount(count); // Langsung set jumlah baru
+    setNewsCount(count); // Set jumlah baru
+  };
+
+  const handleNewsAdded = (count: number) => {
+    setNewsCount((prevCount) => prevCount + count); // Tambah jumlah berita baru
   };
 
   const renderPage = () => {
@@ -19,13 +23,7 @@ export default function DashboardPage() {
       case "home":
         return <Roro />;
       case "tambah-berita":
-        return (
-          <UploadNews
-            onNewsAdded={function (count: number): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
-        );
+        return <UploadNews onNewsAdded={handleNewsAdded} />;
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
       default:
@@ -35,10 +33,13 @@ export default function DashboardPage() {
 
   return (
     <div className="flex min-h-screen">
-      <aside className="w-64 bg-blue-800 text-white p-4 hidden md:block">
-        <h1 className="text-2xl font-bold mb-6">Dashboard Berita</h1>
+      {/* Sidebar */}
+      <aside className="w-64 bg-[#3699FF] text-white p-4 hidden md:block">
+        <h1 className="text-2xl font-bold mb-6 flex  justify-center">
+          Dashboard{" "}
+        </h1>
         <nav>
-          {/* Urutan menu diubah: Home, Daftar Berita, Tambah Berita */}
+          {/* Urutan menu: Home, Daftar Berita, Tambah Berita */}
           <button
             className="block py-2 px-4 rounded hover:bg-blue-700 w-full text-left"
             onClick={() => setSelectedPage("home")}>
@@ -56,6 +57,8 @@ export default function DashboardPage() {
           </button>
         </nav>
       </aside>
+
+      {/* Content */}
       <main className="flex-1 p-6 bg-gray-100">{renderPage()}</main>
     </div>
   );
