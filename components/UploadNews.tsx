@@ -103,38 +103,32 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
       </h1>
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image Preview */}
-        <div>
-          <div className="flex flex-col md:flex-row  gap-4">
-            {/* Input untuk mengunggah gambar, disembunyikan */}
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="hidden" // Sembunyikan input file
-              id="imageInput"
-            />
-
-            {/* Preview gambar yang bisa di-klik untuk memicu input gambar */}
-            <div
-              className="w-full  flex items-center justify-center border border-dashed border-gray-300 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-blue-500"
-              onClick={() => document.getElementById("imageInput")?.click()} // Trigger klik pada input file
-            >
-              {previewImage ? (
-                <Image
-                  src={previewImage}
-                  alt="Preview"
-                  className="rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
-                  width={150}
-                  height={150}
-                />
-              ) : (
-                <div className="w-36 h-36 flex items-center justify-center">
-                  <span className="text-gray-500">
-                    Klik untuk mengunggah gambar
-                  </span>
-                </div>
-              )}
-            </div>
+        <div className="w-full md:w-1/3">
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="hidden"
+            id="imageInput"
+          />
+          <div
+            className="w-full flex items-center justify-center border border-dashed border-gray-300 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-blue-500"
+            onClick={() => document.getElementById("imageInput")?.click()}>
+            {previewImage ? (
+              <Image
+                src={previewImage}
+                alt="Preview"
+                className="rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
+                width={150}
+                height={150}
+              />
+            ) : (
+              <div className="w-36 h-36 flex items-center justify-center">
+                <span className="text-gray-500">
+                  Klik untuk mengunggah gambar
+                </span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -185,6 +179,8 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
               {loading ? "Uploading..." : "Upload Berita"}
             </button>
           </form>
+          {error && <p className="text-red-500 mt-4">{error}</p>}{" "}
+          {/* Display error message */}
         </div>
       </div>
     </div>
