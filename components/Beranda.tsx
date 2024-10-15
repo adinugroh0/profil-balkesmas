@@ -82,9 +82,9 @@ export function Beranda() {
           </motion.h1>
         </HeroHighlight>
 
-        <div className=" flex flex-col lg:flex-row  items-center justify-around gap-3 p-6">
-          {/* klinik anak */}
-          <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+        <div className="flex flex-wrap lg:flex-row items-center justify-around gap-6 overflow-x-scroll snap-x snap-mandatory">
+          {/* Klinik Anak */}
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -102,22 +102,23 @@ export function Beranda() {
               </svg>
             </div>
             <Link href={"/KlinikAnak"}>
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-2xl font-semibold group-hover:text-white transition duration-300">
                   Klinik Anak
                 </h1>
-                <p className="max-w-56 group-hover:text-white  transition duration-300">
+                <p className="text-sm max-w-56 text-gray-600 group-hover:text-white transition duration-300">
                   Pelayanan Pemeriksaan kesehatan, Medical check up, Screening
-                  TBC, Screening stunting, TB anak, dll.
+                  TBC, dll.
                 </p>
-                <p className="text-[#2A8EE4] group-hover:text-white transition duration-300">
+                <p className="text-[#005792] font-semibold group-hover:text-white transition duration-300">
                   SELENGKAPNYA +
                 </p>
               </div>
             </Link>
           </div>
-          {/* klinik Umum */}
-          <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+
+          {/* Klinik Umum */}
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -135,22 +136,23 @@ export function Beranda() {
               </svg>
             </div>
             <Link href={"/KlinikUmumBaru"}>
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-2xl font-semibold group-hover:text-white transition duration-300">
                   Klinik Umum
                 </h1>
-                <p className="max-w-56 group-hover:text-white   transition duration-300">
-                  Pelayanan medis kepada seorang pasien untuk tujuan screening
-                  awal, diagnosis,dan pelayanan kesehatan lainnya.
+                <p className="text-sm max-w-56 text-gray-600 group-hover:text-white transition duration-300">
+                  Pelayanan medis untuk screening awal, diagnosis, dan pelayanan
+                  kesehatan lainnya.
                 </p>
-                <p className="text-[#2A8EE4] group-hover:text-white transition duration-300">
+                <p className="text-[#005792] font-semibold group-hover:text-white transition duration-300">
                   SELENGKAPNYA +
                 </p>
               </div>
             </Link>
           </div>
-          {/*  Laboratorium */}
-          <div className=" group bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+
+          {/* Laboratorium */}
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -168,22 +170,23 @@ export function Beranda() {
               </svg>
             </div>
             <Link href={"/Laboratorium"}>
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-2xl font-semibold group-hover:text-white transition duration-300">
                   Laboratorium
                 </h1>
-                <p className="max-w-56 group-hover:text-white    transition duration-300">
-                  Sebagai penunjang diagnosa, Membantu menegakkan diagnosa,
-                  mengetahui status kesehatan seseorang
+                <p className="text-sm max-w-56 text-gray-600 group-hover:text-white transition duration-300">
+                  Penunjang diagnosa, membantu menegakkan diagnosa, dan status
+                  kesehatan.
                 </p>
-                <p className="text-[#2A8EE4] group-hover:text-white transition duration-300">
+                <p className="text-[#005792] font-semibold group-hover:text-white transition duration-300">
                   SELENGKAPNYA +
                 </p>
               </div>
             </Link>
           </div>
-          {/*  Fisioterapi */}
-          <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+
+          {/* Fisioterapi */}
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -201,22 +204,21 @@ export function Beranda() {
               </svg>
             </div>
             <Link href={"/Fisioterapi"}>
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-2xl font-semibold group-hover:text-white transition duration-300">
                   Fisioterapi
                 </h1>
-                <p className="max-w-56 group-hover:text-white    transition duration-300">
-                  Pelayanan Rawat Jalan yang memberikan pelayanan fisioterapi
-                  kepada seorang pasien untuk tujuan anamnesa,
+                <p className="text-sm max-w-56 text-gray-600 group-hover:text-white transition duration-300">
+                  Layanan pemulihan, rehabilitasi fisik untuk pasien dengan
+                  kondisi tertentu.
                 </p>
-                <p className="text-[#2A8EE4] group-hover:text-white transition duration-300">
+                <p className="text-[#005792] font-semibold group-hover:text-white transition duration-300">
                   SELENGKAPNYA +
                 </p>
               </div>
             </Link>
           </div>
-          {/*  Klinik vct-cst */}
-          <div className=" group  bg-slate-50 shadow-indigo-500/50 shadow-xl drop-shadow-2xl p-7 rounded-xl transition duration-300 hover:bg-[#2A8EE4]">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 stroke-[#2A8EE4] group-hover:stroke-white transform group-hover:scale-x-[-1]"
@@ -234,15 +236,15 @@ export function Beranda() {
               </svg>
             </div>
             <Link href={"/VctCst"}>
-              <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold group-hover:text-white transition duration-300">
+              <div className="flex flex-col gap-3">
+                <h1 className="text-2xl font-semibold group-hover:text-white transition duration-300">
                   VCT-CST
                 </h1>
-                <p className="max-w-56 group-hover:text-white    transition duration-300">
+                <p className="text-sm max-w-56 text-gray-600 group-hover:text-white transition duration-300">
                   Bertujuan untuk membantu pencegahan, perawatan dan pengobatan
                   bagi penderita HIV/AIDS.
                 </p>
-                <p className="text-[#2A8EE4] group-hover:text-white transition duration-300">
+                <p className="text-[#005792] font-semibold group-hover:text-white transition duration-300">
                   SELENGKAPNYA +
                 </p>
               </div>
