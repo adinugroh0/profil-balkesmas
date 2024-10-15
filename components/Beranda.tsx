@@ -84,7 +84,7 @@ export function Beranda() {
 
         <div className="flex flex-wrap lg:flex-row items-center justify-around gap-6 overflow-x-scroll snap-x snap-mandatory">
           {/* Klinik Anak */}
-          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#2A8EE4] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -118,7 +118,7 @@ export function Beranda() {
           </div>
 
           {/* Klinik Umum */}
-          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#2A8EE4] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -152,7 +152,7 @@ export function Beranda() {
           </div>
 
           {/* Laboratorium */}
-          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#2A8EE4] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -186,7 +186,7 @@ export function Beranda() {
           </div>
 
           {/* Fisioterapi */}
-          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#2A8EE4] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 fill-[#2A8EE4] group-hover:fill-white transform group-hover:scale-x-[-1]"
@@ -218,7 +218,7 @@ export function Beranda() {
               </div>
             </Link>
           </div>
-          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#005792] hover:shadow-xl">
+          <div className="group snap-start bg-white shadow-lg border border-gray-200 p-8 rounded-lg transition duration-300 hover:bg-[#2A8EE4] hover:shadow-xl">
             <div className="block">
               <svg
                 className="transition duration-300 stroke-[#2A8EE4] group-hover:stroke-white transform group-hover:scale-x-[-1]"
