@@ -230,8 +230,6 @@ export default function Home() {
           SABTU-MINGGU , CUTI BERSAMA DAN HARI LIBUR NASIONAL : PELAYANAN TUTUP
         </h1>
       </div>
-
-      <Footer />
     </>
   );
 }

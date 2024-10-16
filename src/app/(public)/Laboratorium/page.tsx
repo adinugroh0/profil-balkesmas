@@ -59,8 +59,6 @@ export default function Home() {
           pelayanan yang berkualitas.
         </p>
       </div>
-
-      <Footer />
     </>
   );
 }
