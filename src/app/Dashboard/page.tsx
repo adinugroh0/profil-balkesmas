@@ -1,12 +1,15 @@
-"use client"; // Penanda bahwa ini adalah Client Component
+// src/app/Dashboard/page.tsx
 
-import React, { useState } from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/Sidebar";
 import {
   IconArrowLeft,
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
+  IconKey,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -14,12 +17,23 @@ import Image from "next/image";
 import UploadNews from "@/components/UploadNews";
 import NewsDashboard from "@/components/NewsDashboard";
 import Roro from "@/components/Roro";
+import ChangePassword from "@/components/ChangePassword"; // Import ChangePassword component
+import { useRouter } from "next/navigation";
 
 export default function DashboardPage() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [newsCount, setNewsCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showUploadNews, setShowUploadNews] = useState(false); // State to manage the UploadNews visibility
+  const router = useRouter();
+
+  // Cek apakah pengguna sudah login (token di localStorage)
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.push("/Login");
+    }
+  }, [router]);
 
   // Sidebar links
   const links = [
@@ -39,47 +53,57 @@ export default function DashboardPage() {
     },
     {
       label: "Tambah Berita",
-      href: "#", // Keep href as "#" since we handle it with onClick
+      href: "#",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Logout",
+      label: "Ganti Password", // Tambahkan link untuk ganti password
       href: "#",
+      icon: (
+        <IconKey className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Logout",
+      href: "/Login",
       icon: (
         <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
 
-  // Handle page rendering
   const renderPage = () => {
     switch (selectedPage) {
       case "home":
         return <Roro />;
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
+      case "ganti-password": // Tambahkan case untuk ganti password
+        return <ChangePassword />;
       default:
         return <h1>Page not found</h1>;
     }
   };
 
-  // Handle news count changes
   const handleNewsCountChange = (count: number) => {
-    setNewsCount(count); // Update news count
+    setNewsCount(count);
   };
 
   const handleNewsAdded = (count: number) => {
-    setNewsCount((prevCount) => prevCount + count); // Add new news count
+    setNewsCount((prevCount) => prevCount + count);
   };
 
   const handleLinkClick = (label: string) => {
     if (label === "Tambah Berita") {
-      setShowUploadNews(true); // Show the upload news component
+      setShowUploadNews(true);
+    } else if (label === "Logout") {
+      localStorage.removeItem("token");
+      router.push("/Login");
     } else {
-      setSelectedPage(label.toLowerCase().replace(" ", "-")); // Handle other links
-      setShowUploadNews(false); // Ensure UploadNews is hidden for other links
+      setSelectedPage(label.toLowerCase().replace(" ", "-"));
+      setShowUploadNews(false);
     }
   };
 
@@ -97,7 +121,7 @@ export default function DashboardPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="font-medium text-black dark:text-white whitespace-pre">
-                Acet Labs
+                Dashboard Balkesmas
               </motion.span>
             </Link>
             <div className="mt-8 flex flex-col gap-2">
@@ -114,11 +138,11 @@ export default function DashboardPage() {
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
+                label: "Admin Balkesmas",
                 href: "#",
                 icon: (
                   <Image
-                    src="https://assets.aceternity.com/manu.png"
+                    src="/icon.png"
                     className="h-7 w-7 flex-shrink-0 rounded-full"
                     width={50}
                     height={50}
