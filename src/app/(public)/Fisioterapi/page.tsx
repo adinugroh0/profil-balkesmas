@@ -1,17 +1,10 @@
 /* eslint-disable @next/next/no-css-tags */
 import Image from "next/image";
-import Link from "next/link";
-import Beranda from "@/components/Beranda";
-import TampilkanBerita from "@/components/TampilkanBerita";
-import Berita from "@/components/Berita";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { useInView } from "react-intersection-observer";
-import AnimatedSection from "@/components/AnimatedSection";
 import React from "react";
-import { FocusCards } from "@/components/ui/focus-cards";
+import { FocusCards } from "@/components/ui/focus-cards"; // pastikan path ini benar
 
-export function FocusCardsDemo() {
+// Fungsi pendukung untuk menampilkan kartu
+function FocusCardsDemo() {
   const cards = [
     {
       title: "TINDAKAN NEBULISASI",
@@ -38,6 +31,7 @@ export function FocusCardsDemo() {
   return <FocusCards cards={cards} />;
 }
 
+// Komponen halaman utama
 export default function Home() {
   return (
     <>
