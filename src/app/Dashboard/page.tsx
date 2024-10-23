@@ -1,5 +1,3 @@
-// src/app/Dashboard/page.tsx
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -24,10 +22,9 @@ export default function DashboardPage() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [newsCount, setNewsCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [showUploadNews, setShowUploadNews] = useState(false); // State to manage the UploadNews visibility
+  const [showUploadNews, setShowUploadNews] = useState(false);
   const router = useRouter();
 
-  // Cek apakah pengguna sudah login (token di localStorage)
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -35,7 +32,6 @@ export default function DashboardPage() {
     }
   }, [router]);
 
-  // Sidebar links
   const links = [
     {
       label: "Home",
@@ -59,7 +55,7 @@ export default function DashboardPage() {
       ),
     },
     {
-      label: "Ganti Password", // Tambahkan link untuk ganti password
+      label: "Ganti Password",
       href: "#",
       icon: (
         <IconKey className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
@@ -80,7 +76,7 @@ export default function DashboardPage() {
         return <Roro />;
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
-      case "ganti-password": // Tambahkan case untuk ganti password
+      case "ganti-password":
         return <ChangePassword />;
       default:
         return <h1>Page not found</h1>;
@@ -109,7 +105,6 @@ export default function DashboardPage() {
 
   return (
     <div className="flex min-h-screen">
-      {/* Sidebar */}
       <Sidebar open={isSidebarOpen} setOpen={setIsSidebarOpen} animate={false}>
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
@@ -155,7 +150,6 @@ export default function DashboardPage() {
         </SidebarBody>
       </Sidebar>
 
-      {/* Main Content */}
       <main className="flex-1 p-6 bg-gray-100">
         {showUploadNews ? (
           <UploadNews onNewsAdded={handleNewsAdded} />

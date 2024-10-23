@@ -1,7 +1,4 @@
-// components/ChangePassword.tsx
-"use client";
-
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function ChangePassword() {
   const [oldPassword, setOldPassword] = useState("");
@@ -9,86 +6,82 @@ export default function ChangePassword() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  const handlePasswordChange = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setMessage(""); // Reset message
 
+    // Check if the new passwords match
     if (newPassword !== confirmPassword) {
-      setMessage("Password baru tidak cocok.");
+      setMessage("New passwords do not match.");
       return;
     }
 
-    // Misal: Lakukan pemanggilan API untuk update password
-    // const response = await fetch("/api/change-password", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ oldPassword, newPassword }),
-    // });
+    try {
+      const response = await fetch("/api/change-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ oldPassword, newPassword }),
+      });
 
-    setMessage("Password berhasil diubah.");
-    // Handle response dari API
-    // const data = await response.json();
-    // if (data.success) {
-    //   setMessage("Password berhasil diubah.");
-    // } else {
-    //   setMessage("Gagal mengubah password.");
-    // }
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("Password changed successfully.");
+      } else {
+        setMessage(data.message || "Failed to change password.");
+      }
+    } catch (error) {
+      setMessage("An error occurred. Please try again.");
+    }
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
-      <h2 className="text-xl font-bold mb-4">Ganti Password</h2>
-      {message && <p className="mb-4 text-red-600">{message}</p>}
-      <form onSubmit={handlePasswordChange}>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+      <h2 className="text-2xl mb-4">Change Password</h2>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="oldPassword" className="block text-sm font-medium">
-            Password Lama
+          <label className="block text-sm font-medium text-gray-700">
+            Old Password
           </label>
           <input
             type="password"
-            id="oldPassword"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             value={oldPassword}
             onChange={(e) => setOldPassword(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
             required
           />
         </div>
-
         <div className="mb-4">
-          <label htmlFor="newPassword" className="block text-sm font-medium">
-            Password Baru
+          <label className="block text-sm font-medium text-gray-700">
+            New Password
           </label>
           <input
             type="password"
-            id="newPassword"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
             required
           />
         </div>
-
         <div className="mb-4">
-          <label
-            htmlFor="confirmPassword"
-            className="block text-sm font-medium">
-            Konfirmasi Password Baru
+          <label className="block text-sm font-medium text-gray-700">
+            Confirm New Password
           </label>
           <input
             type="password"
-            id="confirmPassword"
-            className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
             required
           />
         </div>
-
+        {message && <p className="text-red-500">{message}</p>}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">
-          Ubah Password
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+          Change Password
         </button>
       </form>
     </div>
