@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import PDFUploader from "./PDFUploader";
 
 const SumberdayaManusia = () => {
   return (
@@ -35,20 +36,7 @@ const SumberdayaManusia = () => {
             orang tenaga kontrak daerah
           </p>
         </div>
-        <div
-          className="flex p-7 items-center border-x-2 border-[#2337EB] justify-center gap-5 bg-transparent  w-48 h-5 rounded-xl text-[#2337EB] hover:bg-[#2337EB]
-         hover:text-white  hover:shadow ">
-          <Link href="#" className="font-semibold">
-            Lihat Data
-          </Link>
-          <Image
-            src="/beranda/panahbawah.png"
-            alt="icon"
-            className="w-3 h-3"
-            width={80}
-            height={60}
-          />
-        </div>
+        <PDFUploader />
       </div>
     </div>
   );

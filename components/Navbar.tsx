@@ -45,7 +45,7 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/StrukturOrganisasi">
               Struktur Organisasi
             </HoveredLink>
-            <HoveredLink href="/SumbarDayaManusia">
+            <HoveredLink href="/SumberdayaManusia">
               Sumber Daya Manusia
             </HoveredLink>
           </div>
