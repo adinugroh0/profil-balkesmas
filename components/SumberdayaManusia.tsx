@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import PDFUploader from "./PDFUploader";
+import PDFViewer from "./PDFViewer";
 
 const SumberdayaManusia = () => {
   return (
@@ -36,7 +36,7 @@ const SumberdayaManusia = () => {
             orang tenaga kontrak daerah
           </p>
         </div>
-        <PDFUploader />
+        <PDFViewer />
       </div>
     </div>
   );
