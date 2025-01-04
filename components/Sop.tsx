@@ -6,7 +6,7 @@ const Sop = () => {
   return (
     <div className="flex flex-col justify-center items-center ">
       <iframe
-        src="/SOP.pdf"
+        src="/sop.pdf"
         className="w-9/12 h-svh p-7"
         width="600"
         height="400"
