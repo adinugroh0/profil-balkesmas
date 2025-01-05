@@ -252,7 +252,6 @@ export function Beranda() {
           </div>
         </div>
       </AnimatedSection>
-      {/*  card tujuan */}
       <AnimatedSection>
         <CardContainer className="  w-full h-screen">
           <CardBody className="w-11/12 h-screen bg-[#D4E8FA] flex flex-col lg:flex-row  items-center justify-around group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]   rounded-xl p-6 border  ">

@@ -7,7 +7,6 @@ import {
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
-  IconKey,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,7 +14,6 @@ import Image from "next/image";
 import UploadNews from "@/components/UploadNews";
 import NewsDashboard from "@/components/NewsDashboard";
 import Roro from "@/components/Roro";
-import ChangePassword from "@/components/ChangePassword"; // Import ChangePassword component
 import { useRouter } from "next/navigation";
 import PDFUploader from "@/components/PDFUploader";
 
@@ -56,13 +54,6 @@ export default function DashboardPage() {
       ),
     },
     {
-      label: "Password",
-      href: "#",
-      icon: (
-        <IconKey className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
       label: "Logout",
       href: "/Login",
       icon: (
@@ -77,8 +68,6 @@ export default function DashboardPage() {
         return <Roro />;
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
-      case "password":
-        return <ChangePassword />;
       default:
         return <h1>Page not found</h1>;
     }

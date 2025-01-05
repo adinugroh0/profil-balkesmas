@@ -8,18 +8,28 @@ interface NewsFormData {
   title: string;
   content: string;
   author: string;
+  category: string;
   image: File | null;
 }
 
 interface UploadNewsProps {
-  onNewsAdded: (count: number) => void; // Menambahkan prop untuk callback
+  onNewsAdded: (count: number) => void; // Callback untuk memperbarui jumlah berita
 }
+
+const categories = [
+  "Kesehatan",
+  "Teknologi",
+  "Pendidikan",
+  "Olahraga",
+  "Lainnya",
+];
 
 export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   const [formData, setFormData] = useState<NewsFormData>({
     title: "",
     content: "",
     author: "",
+    category: "",
     image: null,
   });
   const [loading, setLoading] = useState(false);
@@ -27,7 +37,9 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -77,6 +89,7 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
           title: formData.title,
           content: formData.content,
           author: formData.author,
+          category: formData.category,
           image_url: imageUrl,
         },
       ]);
@@ -87,7 +100,13 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
       onNewsAdded(1); // Menganggap satu berita telah ditambahkan
 
       // Reset form fields
-      setFormData({ title: "", content: "", author: "", image: null });
+      setFormData({
+        title: "",
+        content: "",
+        author: "",
+        category: "",
+        image: null,
+      });
       setPreviewImage(null);
     } catch (error) {
       setError("Error uploading news.");
@@ -167,6 +186,21 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
+            <div className="mb-4">
+              <select
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+                required
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-500">
+                <option value="">Pilih Kategori</option>
+                {categories.map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
 
             <button
               type="submit"
@@ -179,8 +213,7 @@ export default function UploadNews({ onNewsAdded }: UploadNewsProps) {
               {loading ? "Uploading..." : "Upload Berita"}
             </button>
           </form>
-          {error && <p className="text-red-500 mt-4">{error}</p>}{" "}
-          {/* Display error message */}
+          {error && <p className="text-red-500 mt-4">{error}</p>}
         </div>
       </div>
     </div>
