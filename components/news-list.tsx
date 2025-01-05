@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "@/src/lib/supabaseClient";
+import { supabase } from "@/src/lib/supabaseClient"; // Pastikan Anda mengimpor supabase dengan benar
 import Link from "next/link";
 import Image from "next/image";
 
@@ -114,7 +114,7 @@ export default function NewsList() {
                 key={item.id}
                 className="bg-[#2A8EE4] shadow-md rounded-lg p-6 flex flex-col lg:flex-row gap-6 lg:gap-10 items-start transition transform hover:scale-105 hover:shadow-lg">
                 <Link
-                  href={`/news/${item.id}`}
+                  href={`/news/${item.id}`} // Link ke halaman detail berita
                   className="flex flex-col lg:flex-row items-start w-full">
                   {item.image_url && (
                     <div className="flex-shrink-0 w-full lg:w-1/3">
@@ -131,7 +131,6 @@ export default function NewsList() {
                     <h2 className="text-3xl font-semibold text-white mb-2">
                       {item.title}
                     </h2>
-                    {/* Menambahkan keterangan di bawah judul */}
                     <p className="text-white mt-4">
                       {item.content.substring(0, 150)}...
                     </p>
