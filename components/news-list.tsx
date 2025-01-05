@@ -16,7 +16,7 @@ interface NewsItem {
 }
 
 const categories = [
-  "Semua",
+  "all",
   "Kesehatan",
   "Pendidikan",
   "Teknologi",
@@ -42,7 +42,7 @@ export default function NewsList() {
           .order("created_at", { ascending: false });
 
         // Menambahkan kondisi untuk filter berdasarkan kategori, jika bukan "all"
-        if (selectedCategory !== "Semua") {
+        if (selectedCategory !== "all") {
           query = query.eq("category", selectedCategory);
         }
 
