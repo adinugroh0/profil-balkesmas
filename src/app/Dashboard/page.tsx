@@ -149,6 +149,7 @@ export default function DashboardPage() {
               }}
             />
           </div>
+          <PDFUploader />
         </SidebarBody>
       </Sidebar>
 
@@ -159,7 +160,6 @@ export default function DashboardPage() {
           renderPage()
         )}
       </main>
-      <PDFUploader />
     </div>
   );
 }
