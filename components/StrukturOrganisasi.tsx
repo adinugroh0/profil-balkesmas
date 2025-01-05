@@ -6,7 +6,7 @@ import Link from "next/link";
 const StrukturOrganisasi = () => {
   return (
     <div>
-      <div className=" flex h-auto  w-full items-center justify-center">
+      <div className="flex h-auto w-full items-center justify-center">
         <Image
           src="/strukturorganisasi/struktur.png"
           alt="Background Image"
@@ -18,7 +18,8 @@ const StrukturOrganisasi = () => {
         <h1 className="text-4xl font-extrabold ">PEMELIK KLINIK</h1>
         <p>KA BALKESMAS WIL SMG</p>
       </div>
-      {/*penangung jawab klinik */}
+
+      {/* Penanggung jawab klinik */}
       <div className="flex flex-col p-7 items-center justify-center gap-5">
         <div>
           <Image
@@ -42,7 +43,7 @@ const StrukturOrganisasi = () => {
         </div>
       </div>
 
-      {/*KELOMPOK JABATAN */}
+      {/* Kelompok Jabatan */}
       <div className="flex flex-col lg:flex-row justify-around">
         <div className="flex flex-col p-7 items-center justify-center gap-5">
           <div>
@@ -63,7 +64,8 @@ const StrukturOrganisasi = () => {
             </div>
           </div>
         </div>
-        {/*TIM KESLAMATAN KERJA & MANAJEMEN FASILITAS KESEHATAN */}
+
+        {/* Tim Keselamatan Kerja & Manajemen Fasilitas Kesehatan */}
         <div className="flex flex-col p-7 items-center justify-center gap-5">
           <div>
             <Image
@@ -88,8 +90,8 @@ const StrukturOrganisasi = () => {
         </div>
       </div>
 
-      {/*TIM MUTU & KESLAMATAN PASIEN  dan TIM MANAEMEN RISIKO  */}
-      <div className="flex flex-col lg:flex-row justify-around">
+      {/* Tim Mutu & Keselamatan Pasien dan Tim Manajemen Risiko */}
+      <div className="flex flex-col lg:flex-row justify-around mt-10">
         <div className="flex flex-col p-7 items-center justify-center gap-5">
           <div>
             <Image
@@ -112,7 +114,8 @@ const StrukturOrganisasi = () => {
             </div>
           </div>
         </div>
-        {/*TIM MANAEMEN RISIKO */}
+
+        {/* Tim Manajemen Risiko */}
         <div className="flex flex-col p-7 items-center justify-center gap-5">
           <div>
             <Image
@@ -128,7 +131,7 @@ const StrukturOrganisasi = () => {
               <h1 className="text-white text-center">SUB KOORDINATOR</h1>
             </div>
             <div>
-              <p>Pnunjang Pelayanan</p>
+              <p>Pendukung Pelayanan</p>
             </div>
           </div>
         </div>

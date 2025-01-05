@@ -7,6 +7,7 @@ import {
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
+  IconUser,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -16,6 +17,8 @@ import NewsDashboard from "@/components/NewsDashboard";
 import Roro from "@/components/Roro";
 import { useRouter } from "next/navigation";
 import PDFUploader from "@/components/PDFUploader";
+import Hapuspasien from "@/components/PasienBaru";
+import HapusPasien from "@/components/hapuspasien";
 
 export default function DashboardPage() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -47,6 +50,13 @@ export default function DashboardPage() {
       ),
     },
     {
+      label: "Daftar Pasien", // Menambahkan link baru untuk daftar pasien
+      href: "#",
+      icon: (
+        <IconUser className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
       label: "Tambah Berita",
       href: "#",
       icon: (
@@ -68,6 +78,8 @@ export default function DashboardPage() {
         return <Roro />;
       case "daftar-berita":
         return <NewsDashboard onNewsCountChange={handleNewsCountChange} />;
+      case "daftar-pasien": // Menambahkan case untuk daftar pasien
+        return <HapusPasien />;
       default:
         return <h1>Page not found</h1>;
     }

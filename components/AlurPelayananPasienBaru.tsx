@@ -16,7 +16,7 @@ const AlurPelayananPasienBaru = () => {
       </div>
       <div className="flex h-auto  w-full items-center justify-center p-12">
         <Image
-          src="/pelayanan/Pasien baru.png"
+          src="/pelayanan/Pasien Baru.png"
           alt="Background Image"
           width={1920}
           height={1080}

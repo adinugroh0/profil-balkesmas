@@ -8,7 +8,6 @@ interface NewsDetailProps {
 export default async function NewsDetail({ params }: NewsDetailProps) {
   const { id } = params;
 
-  // Fetch berita berdasarkan ID
   const { data: newsItem, error } = await supabase
     .from("news")
     .select("*")
