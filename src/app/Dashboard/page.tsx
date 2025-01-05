@@ -18,7 +18,7 @@ import Roro from "@/components/Roro";
 import { useRouter } from "next/navigation";
 import PDFUploader from "@/components/PDFUploader";
 import Hapuspasien from "@/components/PasienBaru";
-import HapusPasien from "@/components/hapuspasien";
+import HapusPasien from "@/components/HapusPasien";
 
 export default function DashboardPage() {
   const [selectedPage, setSelectedPage] = useState("home");
