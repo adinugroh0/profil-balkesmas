@@ -5,7 +5,6 @@ import { supabase } from "../src/lib/supabaseClient";
 import Image from "next/image";
 
 interface Pasien {
-  id: number;
   nik: string;
   nama: string;
   tanggal_lahir: string;
@@ -104,66 +103,123 @@ const PasienBaru = () => {
             Formulir Kunjungan
           </h2>
           <form onSubmit={handleSimpanPendaftaran}>
-            <input
-              type="text"
-              placeholder="NIK"
-              required
-              value={nik}
-              onChange={(e) => setNik(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
-            />
-            <input
-              type="text"
-              placeholder="Nama"
-              required
-              value={nama}
-              onChange={(e) => setNama(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
-            />
-            <input
-              type="date"
-              required
-              value={tanggalLahir}
-              onChange={(e) => setTanggalLahir(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
-            />
-            <div>
+            <div className="mb-4">
+              <label
+                htmlFor="nik"
+                className="block text-sm font-medium text-gray-700">
+                NIK (Nomor Induk Kependudukan)
+              </label>
               <input
-                type="radio"
-                value="Laki-laki"
-                checked={jenisKelamin === "Laki-laki"}
-                onChange={(e) => setJenisKelamin(e.target.value)}
+                id="nik"
+                type="text"
+                placeholder="Masukkan NIK"
+                required
+                value={nik}
+                onChange={(e) => setNik(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
               />
-              Laki-laki
-              <input
-                type="radio"
-                value="Perempuan"
-                checked={jenisKelamin === "Perempuan"}
-                onChange={(e) => setJenisKelamin(e.target.value)}
-              />
-              Perempuan
             </div>
-            <textarea
-              placeholder="Alamat"
-              required
-              value={alamat}
-              onChange={(e) => setAlamat(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"></textarea>
-            <input
-              type="tel"
-              placeholder="Telepon"
-              required
-              value={telepon}
-              onChange={(e) => setTelepon(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
-            />
-            <input
-              type="date"
-              required
-              value={tanggalKunjungan}
-              onChange={(e) => setTanggalKunjungan(e.target.value)}
-              className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
-            />
+            <div className="mb-4">
+              <label
+                htmlFor="nama"
+                className="block text-sm font-medium text-gray-700">
+                Nama Lengkap
+              </label>
+              <input
+                id="nama"
+                type="text"
+                placeholder="Masukkan Nama"
+                required
+                value={nama}
+                onChange={(e) => setNama(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="tanggal-lahir"
+                className="block text-sm font-medium text-gray-700">
+                Tanggal Lahir
+              </label>
+              <input
+                id="tanggal-lahir"
+                type="date"
+                required
+                value={tanggalLahir}
+                onChange={(e) => setTanggalLahir(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700">
+                Jenis Kelamin
+              </label>
+              <div className="flex items-center gap-4 mt-1">
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="Laki-laki"
+                    checked={jenisKelamin === "Laki-laki"}
+                    onChange={(e) => setJenisKelamin(e.target.value)}
+                  />
+                  <span className="ml-2">Laki-laki</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    value="Perempuan"
+                    checked={jenisKelamin === "Perempuan"}
+                    onChange={(e) => setJenisKelamin(e.target.value)}
+                  />
+                  <span className="ml-2">Perempuan</span>
+                </label>
+              </div>
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="alamat"
+                className="block text-sm font-medium text-gray-700">
+                Alamat Lengkap
+              </label>
+              <textarea
+                id="alamat"
+                placeholder="Masukkan Alamat"
+                required
+                value={alamat}
+                onChange={(e) => setAlamat(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"></textarea>
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="telepon"
+                className="block text-sm font-medium text-gray-700">
+                Nomor Telepon
+              </label>
+              <input
+                id="telepon"
+                type="tel"
+                placeholder="Masukkan Nomor Telepon"
+                required
+                value={telepon}
+                onChange={(e) => setTelepon(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="tanggal-kunjungan"
+                className="block text-sm font-medium text-gray-700">
+                Tanggal Kunjungan
+              </label>
+              <input
+                id="tanggal-kunjungan"
+                type="date"
+                required
+                value={tanggalKunjungan}
+                onChange={(e) => setTanggalKunjungan(e.target.value)}
+                className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring-blue-400"
+              />
+            </div>
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:ring-blue-400">
@@ -182,7 +238,6 @@ const PasienBaru = () => {
           <table className="min-w-full table-auto mt-4">
             <thead>
               <tr className="bg-gray-200">
-                <th className="px-4 py-2">ID</th>
                 <th className="px-4 py-2">Nama</th>
                 <th className="px-4 py-2">Jenis Kelamin</th>
                 <th className="px-4 py-2">Alamat</th>
@@ -191,9 +246,8 @@ const PasienBaru = () => {
               </tr>
             </thead>
             <tbody>
-              {daftarPasien.map((pasien) => (
-                <tr key={pasien.id} className="bg-white border-b">
-                  <td className="px-4 py-2">{pasien.id}</td>
+              {daftarPasien.map((pasien, index) => (
+                <tr key={index} className="bg-white border-b">
                   <td className="px-4 py-2">{pasien.nama}</td>
                   <td className="px-4 py-2">{pasien.jenis_kelamin}</td>
                   <td className="px-4 py-2">{pasien.alamat}</td>

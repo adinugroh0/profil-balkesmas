@@ -67,6 +67,7 @@ const HapusPasien = () => {
             <tr className="bg-gray-200">
               <th className="px-4 py-2">ID</th>
               <th className="px-4 py-2">Nama</th>
+              <th className="px-4 py-2">TL</th>
               <th className="px-4 py-2">NIK</th>
               <th className="px-4 py-2">Aksi</th>
             </tr>
@@ -76,6 +77,7 @@ const HapusPasien = () => {
               <tr key={pasien.id} className="bg-white border-b">
                 <td className="px-4 py-2">{pasien.id}</td>
                 <td className="px-4 py-2">{pasien.nama}</td>
+                <td className="px-4 py-2">{pasien.tanggal_lahir}</td>
                 <td className="px-4 py-2">{pasien.nik}</td>
                 <td className="px-4 py-2">
                   <button
