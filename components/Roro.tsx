@@ -1,14 +1,19 @@
 "use client"; // Menandakan bahwa ini adalah Client Component
 
 import NewsDashboard from "./NewsDashboard";
+import HapusPasien from "./HapusPasien";
 import { useState, useCallback } from "react";
 
 export default function Roro() {
   const [newsCount, setNewsCount] = useState(0);
+  const [pasienCount, setPasienCount] = useState(0);
 
   // Menggunakan useCallback untuk mencegah pembuatan ulang fungsi yang menyebabkan re-render
   const handleNewsCountChange = useCallback((count: number) => {
     setNewsCount(count);
+  }, []);
+  const handlePasienCountChange = useCallback((count: number) => {
+    setPasienCount(count);
   }, []); // Fungsi hanya akan dibuat sekali
 
   return (
@@ -16,6 +21,11 @@ export default function Roro() {
       <div className="flex flex-col bg-[#3699FF] p-4 w-56 rounded-xl drop-shadow-xl">
         <h1 className="text-2xl font-bold text-white">
           Dashboard <br /> Berita : {newsCount}
+        </h1>
+      </div>
+      <div className="flex flex-col bg-[#3699FF] p-4 w-56 rounded-xl drop-shadow-xl">
+        <h1 className="text-2xl font-bold text-white">
+          Dashboard <br /> Pasien yang Dihapus : {pasienCount}
         </h1>
       </div>
       <NewsDashboard onNewsCountChange={handleNewsCountChange} />
