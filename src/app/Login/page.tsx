@@ -1,6 +1,7 @@
 "use client"; // Menandakan ini adalah Client Component
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation"; // Untuk navigasi
 
 export default function LoginPage() {
@@ -59,6 +60,7 @@ export default function LoginPage() {
               className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
+
           {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
           <button
             type="submit"

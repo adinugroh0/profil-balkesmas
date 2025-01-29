@@ -102,6 +102,14 @@ function Navbar({ className }: { className?: string }) {
               description="Portal Laporan Pengaduan Online Provinsi Jawa Tengah"
             />
           </div>
+          <div className="text-sm grid-cols-2 gap-10 p-4 flex items-center">
+            <ProductItem
+              title="facedetektion"
+              href="https://face-coral.vercel.app/"
+              src="/BRITA.png"
+              description="Face Detektion, objek deteksi wajah"
+            />
+          </div>
         </MenuItem>
       </Menu>
     </div>
