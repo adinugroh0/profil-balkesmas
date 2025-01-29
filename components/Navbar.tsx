@@ -106,7 +106,7 @@ function Navbar({ className }: { className?: string }) {
             <ProductItem
               title="facedetektion"
               href="https://face-coral.vercel.app/"
-              src="/BRITA.png"
+              src="/face.png"
               description="Face Detektion, objek deteksi wajah"
             />
           </div>
